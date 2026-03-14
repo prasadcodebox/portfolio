@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Welcome To My PortFolio</title>
     <meta name="theme-color" content="#4f46e5">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
-            crossorigin></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.12/babel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -176,7 +172,8 @@
         }
 
         .experience, .scroll-wrapper, .skills, .hobbies ,.hobbies1 ,.skill-swiper ,.EXP1{
-        background: var(--white);
+        background:#000;
+        color:#fff;
         border-radius: 12px;
         padding: 2rem;
         margin-bottom: 2rem;
@@ -651,9 +648,9 @@
         }
 
         .hobby-column {
-        transition: transform 0.8s ease, opacity 0.8s ease;
-        opacity: 0;
-        }
+transition: transform 0.8s ease, opacity 0.8s ease;
+opacity: 1;
+}
 
         .left {
         text-align: justify;
@@ -666,7 +663,7 @@
         /* Left column animation */
         .hobby-column.left {
 
-        transform: translateX(-100%);
+        transform: translateX(-80px);
         }
 
         .hobby-column.left.slide-in-left {
@@ -675,13 +672,13 @@
         }
 
         .hobby-column.left.slide-out-left {
-        transform: translateX(-100%);
+        transform: translateX(-80px);
         opacity: 0;
         }
 
         /* Right column animation */
         .hobby-column.right {
-        transform: translateX(100%);
+        transform: translateX(80px);
         }
 
         .hobby-column.right.slide-in-right {
@@ -690,7 +687,7 @@
         }
 
         .hobby-column.right.slide-out-right {
-        transform: translateX(100%);
+        transform: translateX(80px);
         opacity: 0;
         }
         .hobby-column.right img {
@@ -1047,7 +1044,7 @@ opacity:1;
             <div class="exp-content" id="expContent">
 
                 <div class="exp-left">
-                    <img id="expImage" src="skills/accenture.png" alt="Experience">
+                    <img id="expImage" src="skills/architecture.png" alt="Experience">
                 </div>
 
                 <div class="exp-right">
