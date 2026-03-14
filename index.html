@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Welcome To My PortFolio</title>
-	<meta name="theme-color" content="#4f46e5">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.12/babel.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-	<style>
-		:root {
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Welcome To My PortFolio</title>
+    <meta name="theme-color" content="#4f46e5">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+            crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.12/babel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <style>
+        :root {
         --primary-color: #4f46e5;
         --bg-color: #f9fafb;
         --text-color: #1f2937;
@@ -754,44 +755,34 @@
         animation: fadeIn 1s ease forwards;
         z-index: 0;
         }
-        .neon-wrapper {
-        position: relative;
-        padding: 5px;
-        border-radius: 16px;
-        background: linear-gradient(60deg, #0ff, #0f0, #f0f, #0ff);
-        background-size: 300% 300%;
-        animation: neonMove 5s linear infinite;
-        }
+        .neon-wrapper{
+position:relative;
+padding:5px;
+border-radius:16px;
+background:rgba(255,255,255,0.05);
+overflow:hidden;
+}
 
-        .neon-wrapper::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 16px;
-        filter: blur(10px);
-        z-index: 0;
-        background: inherit;
-        opacity: 0.1;
-		  pointer-events: none;   /* ADD THIS LINE */
-        }
-        @keyframes neonMove {
-        0% {
-        background-position: 0% 50%;
-        }
-        50% {
-        background-position: 100% 50%;
-        }
-        100% {
-        background-position: 0% 50%;
-        }
-        }
-        .noselect {
-        user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        -moz-user-select: none;
-        }
+.neon-wrapper::before{
+content:"";
+position:absolute;
+inset:-3px;
+border-radius:inherit;
+pointer-events:none;
 
+background:radial-gradient(
+200px circle at var(--x) var(--y),
+rgba(255,255,255,0.6),
+transparent 55%
+);
+
+opacity:0;
+transition:opacity 0.2s ease;
+}
+
+.neon-wrapper:hover::before{
+opacity:1;
+}
 
 
 
@@ -837,7 +828,7 @@
           }
         }
 
-		/* EXP interactive section */
+        /* EXP interactive section */
 
 /* EXP interactive section */
 
@@ -959,9 +950,9 @@ margin:0;
 font-weight:500;
 opacity:1;
 }
-	</style>
+    </style>
 
-	<script> /* added for nav section , theme change */
+    <script> /* added for nav section , theme change */
 			document.addEventListener('DOMContentLoaded', () => {
 				const nav = document.querySelector('nav');
 				const links = Array.from(nav.querySelectorAll('a'));
@@ -992,139 +983,145 @@ opacity:1;
 				scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 				scrollBottomBtn.onclick = () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 			});
-	</script>
+    </script>
 
 
 </head>
 <body data-theme="dark">
 <header>
-	<h1>GANESHPRASAD BALAMURUGAN</h1>
-	<p>Java FullStack | SpringBoot | MicroService Developer</p>
-	<nav class="carousel" aria-label="Main navigation">
-		<a href="#about" data-preview="My Work Experience Summary">About</a>
-		<a href="#EXP" data-preview="Work experience and Education">Experience</a>
-		<a href="#certifications" data-preview="Tech Stack certifications">Certifications</a>
-		<a href="#skills" data-preview="Tech stack & tools">Skills</a>
-		<a href="#skillbadges" data-preview="Skill Badges Obtained">Skillbadges</a>
-		<a href="#hobbies" data-preview="Problem Solving, Gaming & Music">Hobbies</a>
-		<a href="#contact" data-preview="Email & LinkedIn">Contact</a>
-	</nav>
+    <h1>GANESHPRASAD BALAMURUGAN</h1>
+    <p>Java FullStack | SpringBoot | MicroService Developer</p>
+    <nav class="carousel" aria-label="Main navigation">
+        <a href="#about" data-preview="My Work Experience Summary">About</a>
+        <a href="#EXP" data-preview="Work experience and Education">Experience</a>
+        <a href="#certifications" data-preview="Tech Stack certifications">Certifications</a>
+        <a href="#skills" data-preview="Tech stack & tools">Skills</a>
+        <a href="#skillbadges" data-preview="Skill Badges Obtained">Skillbadges</a>
+        <a href="#hobbies" data-preview="Problem Solving, Gaming & Music">Hobbies</a>
+        <a href="#contact" data-preview="Email & LinkedIn">Contact</a>
+    </nav>
 </header>
 
 <section id="about" style="--i:1;">
 
-	<h2>About Me</h2>
-	<div class="neon-wrapper">
-		<div class="hobbies">
-			<div class="hobby-column left">
-				<p>Experienced Java Developer with a demonstrated history of working in the IT industry. Skilled in Spring Framework, Micro Services, REST API, Hibernate, Selenium Cucumber, JUNIT, GCP, AZURE. Involved in end-to-end development of software products starting from requirement analysis to system study, designing, coding, testing, debugging, documentation & deployment. Sound in problem-solving, pragmatic thinking, very much interested and motivated to learn new technologies required for my job.</p>
-				<div class="button-group">
-					<a href="#contact" class="btn">Contact Me ✆ </a>
-					<a href="https://github.com/prasadcodebox/portfolio/raw/main/skills/resume.pdf" class="btn" download="Sample_Resume.pdf">My Resume ⇩ </a>
-				</div>
-			</div>
-			<div class="hobby-column right">
-				<img src="skills/photo.jpg" alt="GANESHPRASAD" style="width: 100%; height: auto; border-radius: 10px;">
-			</div>
-		</div>
-	</div>
+    <h2>About Me</h2>
+    <div class="neon-wrapper">
+        <div class="hobbies">
+            <div class="hobby-column left">
+                <p>Experienced Java Developer with a demonstrated history of working in the IT industry. Skilled in
+                    Spring Framework, Micro Services, REST API, Hibernate, Selenium Cucumber, JUNIT, GCP, AZURE.
+                    Involved in end-to-end development of software products starting from requirement analysis to system
+                    study, designing, coding, testing, debugging, documentation & deployment. Sound in problem-solving,
+                    pragmatic thinking, very much interested and motivated to learn new technologies required for my
+                    job.</p>
+                <div class="button-group">
+                    <a href="#contact" class="btn">Contact Me ✆ </a>
+                    <a href="https://github.com/prasadcodebox/portfolio/raw/main/skills/resume.pdf" class="btn"
+                       download="Sample_Resume.pdf">My Resume ⇩ </a>
+                </div>
+            </div>
+            <div class="hobby-column right">
+                <img src="skills/photo.jpg" alt="GANESHPRASAD" style="width: 100%; height: auto; border-radius: 10px;">
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="EXP" style="--i:2;">
-	<h2>Work Experience</h2>
+    <h2>Work Experience</h2>
 
-	<div class="neon-wrapper">
-		<div class="EXP1">
+    <div class="neon-wrapper">
+        <div class="EXP1">
 
-			<!-- clickable columns -->
-			<div class="exp-columns">
+            <!-- clickable columns -->
+            <div class="exp-columns">
 
-				<button onclick="showExp(event,1)">CITI</button>
-				<button onclick="showExp(event,2)">ACCENTURE</button>
-				<button onclick="showExp(event,3)">TCS</button>
-				<button onclick="showExp(event,4)">COGNIZANT</button>
+                <button onclick="showExp(event,1)">CITI</button>
+                <button onclick="showExp(event,2)">ACCENTURE</button>
+                <button onclick="showExp(event,3)">TCS</button>
+                <button onclick="showExp(event,4)">COGNIZANT</button>
 
-			</div>
+            </div>
 
-			<!-- split content -->
-			<div class="exp-content" id="expContent">
+            <!-- split content -->
+            <div class="exp-content" id="expContent">
 
-				<div class="exp-left">
-					<img id="expImage" src="skills/architecture.png" alt="Experience">
-				</div>
+                <div class="exp-left">
+                    <img id="expImage" src="skills/accenture.png" alt="Experience">
+                </div>
 
-				<div class="exp-right">
+                <div class="exp-right">
 
-					<div class="exp-header">
-						<h3 id="expDesignation">Designation</h3>
-						<h5 id="expPeriod">Time Period</h5>
-					</div>
+                    <div class="exp-header">
+                        <h3 id="expDesignation">Designation</h3>
+                        <h5 id="expPeriod">Time Period</h5>
+                    </div>
 
-					<p id="expRight">
-						Click a column above to view experience details.
-					</p>
+                    <p id="expRight">
+                        Click a column above to view experience details.
+                    </p>
 
-				</div>
+                </div>
 
-			</div>
+            </div>
 
-		</div>
-	</div>
+        </div>
+    </div>
 </section>
 
 <section id="certifications" style="--i:3;">
-	<h2>Certifications</h2>
-	<div class="neon-wrapper">
-		<div class="scroll-wrapper">
-			<div class="scroll-container">
-				<div class="scroll-track" id="scrollTrack">
-				</div>
-			</div>
-		</div>
-	</div>
+    <h2>Certifications</h2>
+    <div class="neon-wrapper">
+        <div class="scroll-wrapper">
+            <div class="scroll-container">
+                <div class="scroll-track" id="scrollTrack">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="skills" style="--i:4;">
-	<h2>Skills & Technologies</h2>
-	<div class="neon-wrapper">
-		<div class="skills">
-			<div id="skills-sections"></div>
-		</div>
-	</div>
+    <h2>Skills & Technologies</h2>
+    <div class="neon-wrapper">
+        <div class="skills">
+            <div id="skills-sections"></div>
+        </div>
+    </div>
 </section>
 
 <section id="skillbadges" style="--i:5;">
-	<h2>Skillbadges</h2>
-	<div class="neon-wrapper">
-		<div class="swiper skill-swiper">
-			<div class="swiper-wrapper">
+    <h2>Skillbadges</h2>
+    <div class="neon-wrapper">
+        <div class="swiper skill-swiper">
+            <div class="swiper-wrapper">
 
-				<div class="swiper-slide"><img src="skills/arc1.png"></div>
-				<div class="swiper-slide"><img src="skills/arc2.png"></div>
-				<div class="swiper-slide"><img src="skills/arc3.png"></div>
-				<div class="swiper-slide"><img src="skills/arc4.png"></div>
-				<div class="swiper-slide"><img src="skills/skbg1.png"></div>
-				<div class="swiper-slide"><img src="skills/skbg2.png"></div>
-				<div class="swiper-slide"><img src="skills/skbg3.png"></div>
-				<div class="swiper-slide"><img src="skills/skbg4.png"></div>
+                <div class="swiper-slide"><img src="skills/arc1.png"></div>
+                <div class="swiper-slide"><img src="skills/arc2.png"></div>
+                <div class="swiper-slide"><img src="skills/arc3.png"></div>
+                <div class="swiper-slide"><img src="skills/arc4.png"></div>
+                <div class="swiper-slide"><img src="skills/skbg1.png"></div>
+                <div class="swiper-slide"><img src="skills/skbg2.png"></div>
+                <div class="swiper-slide"><img src="skills/skbg3.png"></div>
+                <div class="swiper-slide"><img src="skills/skbg4.png"></div>
 
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
 <section id="hobbies" style="--i:6;">
-	<h2>Hobbies</h2>
-	<div class="neon-wrapper">
-		<div class="hobbies1">
-			<ul>
-				<li>Solving new problems and learning new technologies</li>
-				<li>Reading Comics and listening music</li>
-				<li>Gaming, feel free to check my gaming channel below</li>
-			</ul>
-		</div>
-	</div>
+    <h2>Hobbies</h2>
+    <div class="neon-wrapper">
+        <div class="hobbies1">
+            <ul>
+                <li>Solving new problems and learning new technologies</li>
+                <li>Reading Comics and listening music</li>
+                <li>Gaming, feel free to check my gaming channel below</li>
+            </ul>
+        </div>
+    </div>
 </section>
 <!--
 <section id="experience" style="--i:7;">
@@ -1137,59 +1134,60 @@ opacity:1;
 </section>
 -->
 <section class="contacts" id="contact" style="--i:8;">
-	<h2>Contact</h2>
-	<h3 class="title">
-		Contact me by:
-		<span class="site-contact" id="typed-text"></span>
-	</h3>
-	<div class="icons">
-		<a href="mailto:prasad10.ganesh@outlook.com" target="_blank" rel="noopener noreferrer">
-			<div class="layer">
-				<span></span><span></span><span></span><span></span>
-				<span class="fas fa-envelope"></span>
-			</div>
-			<div class="text">Gmail</div>
-		</a>
-		<a href="https://api.whatsapp.com/send?phone=8610679890" target="_blank" rel="noopener noreferrer">
-			<div class="layer">
-				<span></span><span></span><span></span><span></span>
-				<span class="fab fa-whatsapp"></span>
-			</div>
-			<div class="text">Whatsapp</div>
-		</a>
-		<a href="https://www.instagram.com/__i__am__prasad__/" target="_blank" rel="noopener noreferrer">
-			<div class="layer">
-				<span></span><span></span><span></span><span></span>
-				<span class="fab fa-instagram"></span>
-			</div>
-			<div class="text">Instagram</div>
-		</a>
-		<a href="https://www.youtube.com/channel/UCYF98izweQq-0CGpQlmiH7Q?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
-			<div class="layer">
-				<span></span><span></span><span></span><span></span>
-				<span class="fab fa-youtube"></span>
-			</div>
-			<div class="text">YouTube</div>
-		</a>
-		<a href="https://www.linkedin.com/in/prasad10/" target="_blank" rel="noopener noreferrer">
-			<div class="layer">
-				<span></span><span></span><span></span><span></span>
-				<span class="fab fa-linkedin-in"></span>
-			</div>
-			<div class="text">LinkedIn</div>
-		</a>
-		<a href="https://github.com/prasadcodebox" target="_blank" rel="noopener noreferrer">
-			<div class="layer">
-				<span></span><span></span><span></span><span></span>
-				<span class="fab fa-github-square"></span>
-			</div>
-			<div class="text">GitHub</div>
-		</a>
-	</div>
+    <h2>Contact</h2>
+    <h3 class="title">
+        Contact me by:
+        <span class="site-contact" id="typed-text"></span>
+    </h3>
+    <div class="icons">
+        <a href="mailto:prasad10.ganesh@outlook.com" target="_blank" rel="noopener noreferrer">
+            <div class="layer">
+                <span></span><span></span><span></span><span></span>
+                <span class="fas fa-envelope"></span>
+            </div>
+            <div class="text">Gmail</div>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=8610679890" target="_blank" rel="noopener noreferrer">
+            <div class="layer">
+                <span></span><span></span><span></span><span></span>
+                <span class="fab fa-whatsapp"></span>
+            </div>
+            <div class="text">Whatsapp</div>
+        </a>
+        <a href="https://www.instagram.com/__i__am__prasad__/" target="_blank" rel="noopener noreferrer">
+            <div class="layer">
+                <span></span><span></span><span></span><span></span>
+                <span class="fab fa-instagram"></span>
+            </div>
+            <div class="text">Instagram</div>
+        </a>
+        <a href="https://www.youtube.com/channel/UCYF98izweQq-0CGpQlmiH7Q?sub_confirmation=1" target="_blank"
+           rel="noopener noreferrer">
+            <div class="layer">
+                <span></span><span></span><span></span><span></span>
+                <span class="fab fa-youtube"></span>
+            </div>
+            <div class="text">YouTube</div>
+        </a>
+        <a href="https://www.linkedin.com/in/prasad10/" target="_blank" rel="noopener noreferrer">
+            <div class="layer">
+                <span></span><span></span><span></span><span></span>
+                <span class="fab fa-linkedin-in"></span>
+            </div>
+            <div class="text">LinkedIn</div>
+        </a>
+        <a href="https://github.com/prasadcodebox" target="_blank" rel="noopener noreferrer">
+            <div class="layer">
+                <span></span><span></span><span></span><span></span>
+                <span class="fab fa-github-square"></span>
+            </div>
+            <div class="text">GitHub</div>
+        </a>
+    </div>
 </section>
 
 <footer>
-	<p>&copy; 2025 GANESHPRASAD BALAMURUGAN. All rights reserved.</p>
+    <p>&copy; 2025 GANESHPRASAD BALAMURUGAN. All rights reserved.</p>
 </footer>
 
 <button id="scrollTopBtn" title="Go to top">↑</button>
@@ -1374,7 +1372,7 @@ opacity:1;
 
 
 <script>
-	// Skills data
+    // Skills data
     const SKILLS_DATA = [
       {
         sectionName: "Languages",
@@ -1865,7 +1863,7 @@ opacity:1;
 
 
 <script>
-	new Swiper(".skill-swiper", {
+    new Swiper(".skill-swiper", {
       effect: "coverflow",
       grabCursor: true,
       loop: true,
@@ -1906,7 +1904,7 @@ opacity:1;
 
 <script>
 
-	function showExp(event,type){
+    function showExp(event,type){
 
     const area = document.getElementById("expContent");
     const right = document.getElementById("expRight");
@@ -1984,5 +1982,23 @@ opacity:1;
 
 </script>
 
+
+<script>
+    document.querySelectorAll(".neon-wrapper").forEach(card => {
+
+    card.addEventListener("mousemove", e => {
+
+    const rect = card.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    card.style.setProperty("--x", x + "px");
+    card.style.setProperty("--y", y + "px");
+
+    });
+
+    });
+</script>
 </body>
 </html>
