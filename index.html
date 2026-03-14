@@ -24,9 +24,9 @@
         }
 
         [data-theme="dark"] {
-        --bg-color: #1f2937;
+        --bg-color: #000000;
         --text-color: #f9fafb;
-        --white: #2d3748;
+        --white: #000000;
         --timeline-color:#1f2937;
         }
 
@@ -92,7 +92,7 @@
         font-size: 0.6rem; /* Smaller font size */
         }
         }
-        }
+
 
         nav {
         display: flex;
@@ -174,7 +174,7 @@
         text-align: center;
         }
 
-        .experience, .scroll-wrapper, .skills, .hobbies ,.hobbies1 ,.skill-swiper{
+        .experience, .scroll-wrapper, .skills, .hobbies ,.hobbies1 ,.skill-swiper ,.EXP1{
         background: var(--white);
         border-radius: 12px;
         padding: 2rem;
@@ -184,7 +184,7 @@
         animation: fadeIn 1s ease forwards;
         }
 
-        .experience:hover, .scroll-wrapper:hover, .skills:hover, .hobbies:hover , .hobbies1:hover  , .scroll-item a.verify-link:hover,.skill-swiper:hover{
+        .experience:hover, .scroll-wrapper:hover, .skills:hover, .hobbies:hover , .hobbies1:hover  , .scroll-item a.verify-link:hover,.skill-swiper:hover,.EXP1:hover{
         transform: translateY(-5px);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
@@ -368,7 +368,7 @@
         .icons a:nth-child(5) .text { color: #2867B2; border-color: #2867B2; }
 
         .icons a:nth-child(6) .layer span,
-        .icons a:nth-child(6) .text { color: #000; border-color: #000; }
+        .icons a:nth-child(6) .text { color: #fff; border-color: #fff; }
 
         .icons a:hover .layer span {
         box-shadow: -1px 1px 3px currentColor;
@@ -748,7 +748,7 @@
         }
         }
         /* added for glowing neon border */
-        .experience, .scroll-wrapper, .skills, .hobbies ,.hobbies1 ,.skill-swiper{
+        .experience, .scroll-wrapper, .skills, .hobbies ,.hobbies1 ,.skill-swiper ,.EXP1{
         position: relative;
         margin: 0;
         animation: fadeIn 1s ease forwards;
@@ -772,6 +772,7 @@
         z-index: 0;
         background: inherit;
         opacity: 0.1;
+		  pointer-events: none;   /* ADD THIS LINE */
         }
         @keyframes neonMove {
         0% {
@@ -791,22 +792,14 @@
         -moz-user-select: none;
         }
 
-        :host {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          pointer-events: none;
-          z-index: -1;
-          overflow: hidden;
-        }
+
 
 
         .skill-swiper .swiper-slide {
           width: 10rem;
           height: 22rem;
           border-radius: 14px;
-          background: #2d3748;
+          background: #000000;
           box-shadow: -1px 5px 15px rgba(0,0,0,0.25);
           display: flex;
           align-items: center;
@@ -844,6 +837,128 @@
           }
         }
 
+		/* EXP interactive section */
+
+/* EXP interactive section */
+
+/* EXP interactive section */
+
+/* EXP section */
+
+.EXP1{
+width:100%;
+}
+
+/* Top columns */
+
+.exp-columns{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-bottom:20px;
+width:100%;
+}
+
+.exp-columns button{
+background:var(--primary-color);
+color:white;
+padding:12px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+width:100%;
+}
+
+.exp-columns button:hover{
+background:var(--accent-color);
+transform:translateY(-3px);
+}
+
+/* Responsive */
+
+@media(max-width:800px){
+.exp-columns{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:500px){
+.exp-columns{
+grid-template-columns:repeat(1,1fr);
+}
+}
+
+/* Split layout */
+
+.exp-content{
+display:none;
+margin-top:15px;
+width:100%;
+}
+
+.exp-content.active{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+align-items:start;
+}
+
+/* Image */
+
+.exp-left{
+grid-column:1;
+aspect-ratio:1/1;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+padding:10px;
+}
+
+.exp-left img{
+width:80%;
+height:80%;
+object-fit:contain;
+}
+
+/* Text */
+
+.exp-right{
+grid-column:2 / span 3;   /* ⭐ occupies columns 2,3,4 */
+background:var(--white);
+padding:20px;
+border-radius:8px;
+min-height:120px;
+}
+.exp-columns button.active{
+background: var(--accent-color);
+}
+#EXP{
+position:relative;
+z-index:5;
+}
+.exp-columns button{
+pointer-events:auto;
+}
+
+.exp-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+}
+
+.exp-header h3{
+margin:0;
+}
+
+.exp-header h5{
+margin:0;
+font-weight:500;
+opacity:1;
+}
 	</style>
 
 	<script> /* added for nav section , theme change */
@@ -876,26 +991,18 @@
 
 				scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 				scrollBottomBtn.onclick = () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-
-				const themeBtn = document.getElementById('toggleTheme');
-				themeBtn.onclick = () => {
-					document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
-					themeBtn.textContent = document.body.dataset.theme === 'dark' ? '✹ Light Mode' : '☾ Dark Mode';
-				};
 			});
 	</script>
 
 
 </head>
 <body data-theme="dark">
-<sparkles-bg></sparkles-bg>
 <header>
-	<button id="toggleTheme" class="toggle-theme" aria-label="Toggle dark mode">✹ Light Mode</button>
 	<h1>GANESHPRASAD BALAMURUGAN</h1>
 	<p>Java FullStack | SpringBoot | MicroService Developer</p>
 	<nav class="carousel" aria-label="Main navigation">
 		<a href="#about" data-preview="My Work Experience Summary">About</a>
-		<a href="#experience" data-preview="Work experience and Education">Experience</a>
+		<a href="#EXP" data-preview="Work experience and Education">Experience</a>
 		<a href="#certifications" data-preview="Tech Stack certifications">Certifications</a>
 		<a href="#skills" data-preview="Tech stack & tools">Skills</a>
 		<a href="#skillbadges" data-preview="Skill Badges Obtained">Skillbadges</a>
@@ -923,11 +1030,44 @@
 	</div>
 </section>
 
-<section id="experience" style="--i:2;">
-	<h2>Work Experience & Education</h2>
+<section id="EXP" style="--i:2;">
+	<h2>Work Experience</h2>
+
 	<div class="neon-wrapper">
-		<div class="experience">
-			<div id="timeline-root"></div>
+		<div class="EXP1">
+
+			<!-- clickable columns -->
+			<div class="exp-columns">
+
+				<button onclick="showExp(event,1)">CITI</button>
+				<button onclick="showExp(event,2)">ACCENTURE</button>
+				<button onclick="showExp(event,3)">TCS</button>
+				<button onclick="showExp(event,4)">COGNIZANT</button>
+
+			</div>
+
+			<!-- split content -->
+			<div class="exp-content" id="expContent">
+
+				<div class="exp-left">
+					<img id="expImage" src="skills/architecture.png" alt="Experience">
+				</div>
+
+				<div class="exp-right">
+
+					<div class="exp-header">
+						<h3 id="expDesignation">Designation</h3>
+						<h5 id="expPeriod">Time Period</h5>
+					</div>
+
+					<p id="expRight">
+						Click a column above to view experience details.
+					</p>
+
+				</div>
+
+			</div>
+
 		</div>
 	</div>
 </section>
@@ -986,9 +1126,17 @@
 		</div>
 	</div>
 </section>
-
-
-<section class="contacts" id="contact" style="--i:7;">
+<!--
+<section id="experience" style="--i:7;">
+	<h2>Work Experience & Education</h2>
+	<div class="neon-wrapper">
+		<div class="experience">
+			<div id="timeline-root"></div>
+		</div>
+	</div>
+</section>
+-->
+<section class="contacts" id="contact" style="--i:8;">
 	<h2>Contact</h2>
 	<h3 class="title">
 		Contact me by:
@@ -1046,8 +1194,8 @@
 
 <button id="scrollTopBtn" title="Go to top">↑</button>
 <button id="scrollBottomBtn" title="Go to bottom">↓</button>
-<canvas id="cursorCanvas" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;">
-	<script> /* added  for mouse scroll animation */
+<canvas id="cursorCanvas" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;"></canvas>
+<script> /* added  for mouse scroll animation */
 				const canvas = document.getElementById('cursorCanvas');
 				const ctx = canvas.getContext('2d');
 
@@ -1222,8 +1370,8 @@
 				}
 
 				init();
-	</script>
-</canvas>
+</script>
+
 
 <script>
 	// Skills data
@@ -1393,7 +1541,7 @@
 				});
 			});
 </script>
-
+<!--
 <script type="text/babel"> /* Added for experience timeline */
 			const { useState, useEffect } = React;
 
@@ -1540,6 +1688,8 @@
 		];
 			ReactDOM.createRoot(document.getElementById('timeline-root')).render(<CustomTimeline data={experienceData} />);
 </script>
+-->
+
 
 <script> /* Added for certifications scroll track  */
 			const items = [
@@ -1753,6 +1903,86 @@
     });
 </script>
 
+
+<script>
+
+	function showExp(event,type){
+
+    const area = document.getElementById("expContent");
+    const right = document.getElementById("expRight");
+    const img = document.getElementById("expImage");
+    const designation = document.getElementById("expDesignation");
+    const period = document.getElementById("expPeriod");
+
+    if(!area || !right || !img) return;
+
+    /* highlight selected button */
+    document.querySelectorAll(".exp-columns button")
+    .forEach(b => b.classList.remove("active"));
+
+    event.currentTarget.classList.add("active");
+
+    /* show panel */
+    area.classList.add("active");
+
+    /* data */
+    const data = {
+
+    1:{
+    designation:"Java Full stack Developer",
+    period:"February 2026 - Present",
+    text:[
+    "Working on enterprise banking platforms using Java, Spring Boot and Microservices.",
+    "Implemented load balancing and fallback mechanisms, improving server uptime by 30% during peak hours.",
+    "Refactored the existing codebase, improving overall performance by 20%."
+    ],
+    img:"skills/citi.png"
+    },
+
+    2:{
+    designation:"Packaged App Development Senior Analyst",
+    period:"July 2024 - January 2026",
+    text:[
+    "Led a team of 4 to implement a new microservices architecture, improving module efficiency by 30%.",
+    "Reduced server downtimes by 75% using proactive monitoring and automated alerts with GCP and Azure.",
+    "Implemented load balancing and fallback mechanisms, improving server uptime by 30% during peak hours.",
+    "Refactored the existing codebase, improving overall performance by 20%."
+    ],
+    img:"skills/accenture_bg.png"
+    },
+
+    3:{
+    designation:"System Engineer",
+    period:"January 2023 - May 2024",
+    text:[
+    "Created new web components using JavaFX and worked in the migration project from HTML to JavaFX.",
+    "Used JUnit and Selenium Cucumber for Automation Testing, User Acceptance Testing and Bug Fixing.",
+    "Designed and developed microservices and APIs using Spring Boot while continuously identifying refactoring opportunities."
+    ],
+    img:"skills/tcs.png"
+    },
+
+    4:{
+    designation:"Programmer Analyst",
+    period:"December 2020 - June 2022",
+    text:[
+    "Involved in designing, developing, testing and maintaining Java applications including creating test case scenarios.",
+    "Used Hibernate, DAO and JDBC for database operations and implemented OOPS methodologies in modules.",
+    "Prepared design documentation to assist developers and support project development."
+    ],
+    img:"skills/cts.svg"
+    }
+
+    };
+
+    designation.innerHTML = data[type].designation;
+    period.innerHTML = data[type].period;
+    right.innerHTML = "<ul>" + data[type].text.map(t => "<li>" + t + "</li>").join("") + "</ul>";
+    img.src = data[type].img;
+
+    }
+
+</script>
 
 </body>
 </html>
