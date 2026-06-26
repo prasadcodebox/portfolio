@@ -3,112 +3,112 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Welcome To My PortFolio</title>
-    <meta name="theme-color" content="#4f46e5">
+  <title>Welcome To My PortFolio</title>
+  <meta name="theme-color" content="#4f46e5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <style>
-        :root {
-        --primary-color: #4f46e5;
-        --bg-color: #f9fafb;
-        --text-color: #1f2937;
-        --accent-color: #6366f1;
-        --white: #ffffff;
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --bg-color: #f9fafb;
+      --text-color: #1f2937;
+      --accent-color: #6366f1;
+      --white: #ffffff;
         --timeline-color:#E0E0E0;
-        }
+    }
 
-        [data-theme="dark"] {
-        --bg-color: #000000;
-        --text-color: #f9fafb;
-        --white: #000000;
+    [data-theme="dark"] {
+      --bg-color: #000000;
+      --text-color: #f9fafb;
+      --white: #000000;
         --timeline-color:#1f2937;
-        }
+    }
 
-        * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        }
-        body {
-        font-family: 'Inter', sans-serif;
-        background: var(--bg-color);
-        color: var(--text-color);
-        line-height: 1.6;
-        scroll-behavior: smooth;
-        transition: background 0.3s, color 0.3s;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
 
         header ,footer{
-        background-color: var(--primary-color);
-        color: white;
-        padding: 3rem 2rem;
-        text-align: center;
-        animation: fadeIn 1s ease-out forwards;
-        position: relative;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-out forwards;
+      position: relative;
         overflow: hidden; /* ensures dots don't spill outside */
-        }
+    }
 
-        /* Add this */
+    /* Add this */
         header::before , footer::before{
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: radial-gradient(white 1px, transparent 1px);
-        background-size: 20px 20px;
-        z-index: 0;
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: 0;
         opacity: 0.0; /* adjust to make dots more subtle */
-        }
+    }
 
         header * , footer *{
-        position: relative;
-        z-index: 1;
-        }
+      position: relative;
+      z-index: 1;
+    }
 
-        .toggle-theme {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: white;
-        color: var(--primary-color);
-        border: none;
-        border-radius: 8px;
-        padding: 0.5rem 1rem;
-        font-weight: bold;
-        cursor: pointer;
+    .toggle-theme {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: white;
+      color: var(--primary-color);
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
         font-size: 1rem; /* Adjust font size */
-        }
-        /* Adjustments for smaller screens (mobile) */
-        @media (max-width: 600px) {
-        .toggle-theme {
+    }
+    /* Adjustments for smaller screens (mobile) */
+    @media (max-width: 600px) {
+      .toggle-theme {
         top: 0.4rem; /* Reduce the top spacing */
         right: 0.4rem; /* Reduce right spacing */
         padding: 0.3rem 0.6rem; /* Smaller padding */
         font-size: 0.6rem; /* Smaller font size */
-        }
-        }
+      }
+    }
 
 
-        nav {
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
 
-        nav a {
-        flex: 0 0 auto;
-        margin: 0 1rem;
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s, transform 0.5s ease;
-        opacity: 0;
-        transform: translateY(-20px);
-        animation: navSlide 0.6s ease forwards;
-        position: relative;
-        }
+    nav a {
+      flex: 0 0 auto;
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s, transform 0.5s ease;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: navSlide 0.6s ease forwards;
+      position: relative;
+    }
 
         nav a:nth-child(1) { animation-delay: 0.2s; }
         nav a:nth-child(2) { animation-delay: 0.4s; }
@@ -117,232 +117,232 @@
         nav a:nth-child(5) { animation-delay: 1s; }
         nav a:nth-child(6) { animation-delay: 1.2s; }
 
-        nav a::after {
-        content: attr(data-preview);
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%) translateY(0);
-        background: var(--bg-color);
-        color: var(--text-color);
-        padding: 0.5rem 1rem;
-        white-space: nowrap;
-        border-radius: 8px;
+    nav a::after {
+      content: attr(data-preview);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(0);
+      background: var(--bg-color);
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+      border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.5s ease;
-        top: 100%;
-        margin-top: 0.5rem;
-        font-size: 0.875rem;
-        }
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.5s ease;
+      top: 100%;
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+    }
 
-        nav a:hover::after {
-        opacity: 1;
-        transform: translateX(-50%) translateY(10px);
-        }
+    nav a:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(10px);
+    }
 
-        @keyframes navSlide {
-        to {
+    @keyframes navSlide {
+      to {
         opacity: 1;
         transform: translateY(0);
-        }
-        }
+      }
+    }
 
-        section {
-        padding: 3rem 2rem;
-        max-width: 1200px;
-        margin: auto;
-        opacity: 0;
-        transform: translateY(30px);
-        animation: slideUp 0.8s ease forwards;
-        }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 0.8s ease forwards;
+    }
 
         section:nth-of-type(n+2) { animation-delay: calc(0.3s * (var(--i, 1))); }
 
-        h2 {
-        margin-bottom: 1rem;
-        font-size: 2rem;
-        }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
 
-        .intro {
-        font-size: 1.1rem;
-        max-width: 1200px;
-        margin: 1rem auto;
-        text-align: center;
-        }
+    .intro {
+      font-size: 1.1rem;
+      max-width: 1200px;
+      margin: 1rem auto;
+      text-align: center;
+    }
 
         .experience, .scroll-wrapper, .skills, .hobbies ,.hobbies1 ,.skill-swiper ,.EXP1{
         background:#000;
         color:#fff;
-        border-radius: 12px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        animation: fadeIn 1s ease forwards;
-        }
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1s ease forwards;
+    }
 
         .experience:hover, .scroll-wrapper:hover, .skills:hover, .hobbies:hover , .hobbies1:hover  , .scroll-item a.verify-link:hover,.skill-swiper:hover,.EXP1:hover{
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
 
         .experience h3, .scroll-wrapper h3, .skills h3, .hobbies h3 , .hobbies1 h3 ,.skill-swiper{
-        color: var(--accent-color);
-        margin-bottom: 0.5rem;
-        }
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
 
-        ul {
-        padding-left: 1.2rem;
-        list-style-type: disc;
-        }
+    ul {
+      padding-left: 1.2rem;
+      list-style-type: disc;
+    }
 
-        li {
-        margin-bottom: 0.5rem;
-        }
+    li {
+      margin-bottom: 0.5rem;
+    }
 
-        footer {
-        background: var(--primary-color);
-        color: white;
-        text-align: center;
-        padding: 2rem 1rem;
-        animation: fadeIn 1s ease-in-out forwards;
-        }
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
 
-        a {
-        color: var(--primary-color);
-        text-decoration: none;
-        }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
 
-        a:hover {
-        text-decoration: underline;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        @keyframes fadeIn {
+    @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
-        }
+    }
 
-        @keyframes slideUp {
-        from {
+    @keyframes slideUp {
+      from {
         opacity: 0;
         transform: translateY(30px);
-        }
-        to {
+      }
+      to {
         opacity: 1;
         transform: translateY(0);
-        }
-        }
+      }
+    }
         #scrollTopBtn, #scrollBottomBtn {
-        position: fixed;
-        bottom: 30px;
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 0.8rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        z-index: 1200;
+      position: fixed;
+      bottom: 30px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1200;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        display: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        }
+      display: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
 
-        #scrollTopBtn {
-        right: 30px;
-        }
+    #scrollTopBtn {
+      right: 30px;
+    }
 
-        #scrollBottomBtn {
-        right: 90px;
-        }
+    #scrollBottomBtn {
+      right: 90px;
+    }
 
         #scrollTopBtn:hover, #scrollBottomBtn:hover {
-        background-color: var(--accent-color);
-        }
-        .fade-in {
-        opacity: 0;
-        transform: translateX(30px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.show {
-        opacity: 1;
-        transform: translateX(0);
-        }
-        .fade-in:hover {
-        transform: translateX(0) scale(1.02);
-        transition: transform 0.3s ease-out;
-        }
-        .contacts {
-        margin-top: 3rem;
-        max-width: 1500px;
-        text-align: center;
-        justify-content: center;
-        color: var(--light-color-white);
-        }
+      background-color: var(--accent-color);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .fade-in:hover {
+      transform: translateX(0) scale(1.02);
+      transition: transform 0.3s ease-out;
+    }
+    .contacts {
+      margin-top: 3rem;
+      max-width: 1500px;
+      text-align: center;
+      justify-content: center;
+      color: var(--light-color-white);
+    }
 
-        .contacts .heading {
-        font-size: 2rem;
-        }
+    .contacts .heading {
+      font-size: 2rem;
+    }
 
-        .contacts .title {
-        font-size: 2rem;
-        font-weight: normal;
-        margin-bottom: 4rem;
-        text-transform: none;
-        }
+    .contacts .title {
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 4rem;
+      text-transform: none;
+    }
 
-        .contacts .site-contact {
-        font-weight: bold;
-        font-size: 2rem;
-        display: inline-block;
-        margin-left: 10px;
-        }
+    .contacts .site-contact {
+      font-weight: bold;
+      font-size: 2rem;
+      display: inline-block;
+      margin-left: 10px;
+    }
 
-        .icons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 6rem 0;
-        }
+    .icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 6rem 0;
+    }
 
-        .icons a {
-        margin: 5rem 3rem;
-        text-decoration: none;
-        color: #fff;
-        position: relative;
-        }
+    .icons a {
+      margin: 5rem 3rem;
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+    }
 
-        .icons a .layer {
-        width: 7rem;
-        height: 7rem;
-        transition: transform 0.3s;
-        }
+    .icons a .layer {
+      width: 7rem;
+      height: 7rem;
+      transition: transform 0.3s;
+    }
 
-        .icons a:hover .layer {
-        transform: rotate(-35deg) skew(20deg);
-        }
+    .icons a:hover .layer {
+      transform: rotate(-35deg) skew(20deg);
+    }
 
-        .icons a .layer span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        border: 3px solid #fff;
-        border-radius: 5px;
-        transition: all 0.3s;
-        }
+    .icons a .layer span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border: 3px solid #fff;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
 
-        .icons a .layer span.fab,
-        .icons a .layer span.fas {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 4rem;
-        line-height: 55px;
-        }
+    .icons a .layer span.fab,
+    .icons a .layer span.fas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      line-height: 55px;
+    }
 
         .icons a:hover .layer span:nth-child(1) { opacity: 0.2; }
         .icons a:hover .layer span:nth-child(2) { opacity: 0.4; transform: translate(5px, -5px); }
@@ -350,415 +350,415 @@
         .icons a:hover .layer span:nth-child(4) { opacity: 0.8; transform: translate(15px, -15px); }
         .icons a:hover .layer span:nth-child(5) { opacity: 1; transform: translate(20px, -20px); }
 
-        .icons a:nth-child(1) .layer span,
+    .icons a:nth-child(1) .layer span,
         .icons a:nth-child(1) .text { color: #ff0000; border-color: #ff0000; }
 
-        .icons a:nth-child(2) .layer span,
+    .icons a:nth-child(2) .layer span,
         .icons a:nth-child(2) .text { color: #4fc35b; border-color: #4fc35b; }
 
-        .icons a:nth-child(3) .layer span,
+    .icons a:nth-child(3) .layer span,
         .icons a:nth-child(3) .text { color: #E1306C; border-color: #E1306C; }
 
-        .icons a:nth-child(4) .layer span,
+    .icons a:nth-child(4) .layer span,
         .icons a:nth-child(4) .text { color: #ff0000; border-color: #ff0000; }
 
-        .icons a:nth-child(5) .layer span,
+    .icons a:nth-child(5) .layer span,
         .icons a:nth-child(5) .text { color: #2867B2; border-color: #2867B2; }
 
-        .icons a:nth-child(6) .layer span,
+    .icons a:nth-child(6) .layer span,
         .icons a:nth-child(6) .text { color: #fff; border-color: #fff; }
 
-        .icons a:hover .layer span {
-        box-shadow: -1px 1px 3px currentColor;
-        }
+    .icons a:hover .layer span {
+      box-shadow: -1px 1px 3px currentColor;
+    }
 
-        .icons a .text {
-        position: absolute;
-        left: 50%;
-        bottom: -5px;
-        opacity: 0;
-        font-size: 2rem;
-        font-weight: 600;
-        transform: translateX(-50%);
-        transition: bottom 0.3s ease, opacity 0.3s ease;
-        }
+    .icons a .text {
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      opacity: 0;
+      font-size: 2rem;
+      font-weight: 600;
+      transform: translateX(-50%);
+      transition: bottom 0.3s ease, opacity 0.3s ease;
+    }
 
-        .icons a:hover .text {
-        bottom: -35px;
-        opacity: 1;
-        }
+    .icons a:hover .text {
+      bottom: -35px;
+      opacity: 1;
+    }
 
-        @media (max-width: 990px) {
-        .icons a .layer span.fab {
+    @media (max-width: 990px) {
+      .icons a .layer span.fab {
         padding-top: 0;
-        }
-        }
+      }
+    }
 
-        @media (max-width: 760px) {
-        .icons a .text {
+    @media (max-width: 760px) {
+      .icons a .text {
         bottom: -35px;
         opacity: 1;
-        }
-        }
+      }
+    }
 
-        @media (max-width: 450px) {
-        .icons a {
+    @media (max-width: 450px) {
+      .icons a {
         margin: 5rem 2rem;
-        }
-        }
-        @media (max-width: 600px) {
+      }
+    }
+    @media (max-width: 600px) {
         .contacts .site-contact , .contacts .title {
         font-size: 1.2rem;
-        }
-        }
+      }
+    }
 
-        .timeline {
-        position: relative;
-        margin: 0 auto;
-        padding: 40px 0;
-        width: 90%;
-        }
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 40px 0;
+      width: 90%;
+    }
 
-        .timeline::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: var(--primary-color);
-        transform: translateX(-50%);
-        }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--primary-color);
+      transform: translateX(-50%);
+    }
 
-        .timeline-item {
-        position: relative;
-        width: 50%;
-        padding: 20px 30px;
-        box-sizing: border-box;
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 20px 30px;
+      box-sizing: border-box;
         opacity: 0; /* Initially hidden */
         transform: translateX(-100%); /* Start off-screen */
-        transition: transform 1s ease-out, opacity 1s ease-out;
-        }
+      transition: transform 1s ease-out, opacity 1s ease-out;
+    }
 
-        .timeline-item.left {
-        left: 0;
-        text-align: left;
+    .timeline-item.left {
+      left: 0;
+      text-align: left;
         transform: translateX(-100%); /* Initially off-screen */
-        transition: transform 1s ease-out, opacity 1s ease-out;
-        }
+      transition: transform 1s ease-out, opacity 1s ease-out;
+    }
 
-        .timeline-item.right {
+    .timeline-item.right {
         transform: translateX(100%); /* Initially off-screen */
-        transition: transform 1s ease-out, opacity 1s ease-out;
-        left: 50%;
-        text-align: left;
-        }
+      transition: transform 1s ease-out, opacity 1s ease-out;
+      left: 50%;
+      text-align: left;
+    }
 
-        .timeline-item.visible {
+    .timeline-item.visible {
         opacity: 1; /* Fade in */
         transform: translateX(0); /* Slide in */
-        }
+    }
 
-        .timeline-item.right.notvisible {
+    .timeline-item.right.notvisible {
         transform: translateX(100%); /* Slide back to the right for right items */
-        }
+    }
 
-        .timeline-item.left.notvisible {
+    .timeline-item.left.notvisible {
         transform: translateX(-100%); /* Slide back to the left for left items */
-        }
+    }
 
-        .timeline-content {
-        background: var(--timeline-color);
-        padding: 15px 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        position: relative;
-        }
+    .timeline-content {
+      background: var(--timeline-color);
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
 
-        .timeline-item.left .timeline-content::after,
-        .timeline-item.right .timeline-content::after {
-        content: '';
-        position: absolute;
-        top: 20px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        }
+    .timeline-item.left .timeline-content::after,
+    .timeline-item.right .timeline-content::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
 
-        .timeline-item.left .timeline-content::after {
-        right: -5px;
-        }
+    .timeline-item.left .timeline-content::after {
+      right: -5px;
+    }
 
-        .timeline-item.right .timeline-content::after {
-        left: -5px;
-        }
+    .timeline-item.right .timeline-content::after {
+      left: -5px;
+    }
 
-        .timeline-date {
-        font-weight: bold;
-        color: var(--primary-color);
-        margin-bottom: 10px;
-        }
+    .timeline-date {
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
 
-        .timeline-icon img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: contain;
-        margin-bottom: 10px;
+    .timeline-icon img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: contain;
+      margin-bottom: 10px;
         align-items:center;
         background:white;
-        }
+    }
         .timeline-icon img:hover{
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
 
-        button.expand-btn {
-        background-color: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin-top: 10px;
-        font-weight: bold;
-        cursor: pointer;
-        }
+    button.expand-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
         .expand-btn:hover{
-        background-color: var(--accent-color);
-        }
+      background-color: var(--accent-color);
+    }
 
-        ul {
-        padding-left: 20px;
-        }
+    ul {
+      padding-left: 20px;
+    }
 
-        @media (max-width: 768px) {
-        .timeline::after {
+    @media (max-width: 768px) {
+      .timeline::after {
         left: 10px;
-        }
+      }
 
-        .timeline-item {
+      .timeline-item {
         width: 100%;
         padding-left: 30px;
         padding-right: 10px;
-        }
+      }
 
-        .timeline-item.right {
+      .timeline-item.right {
         left: 0;
         text-align: left;
-        }
+      }
 
-        .timeline-item.left .timeline-content::after,
-        .timeline-item.right .timeline-content::after {
+      .timeline-item.left .timeline-content::after,
+      .timeline-item.right .timeline-content::after {
         left: -20px;
-        }
-        }
-        .scroll-wrapper {
-        position: relative;
-        width: 100%;
-        max-width: 1200px;
-        margin: auto;
-        padding: 0 1rem;
-        }
+      }
+    }
+    .scroll-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1rem;
+    }
 
-        .scroll-container {
-        overflow: hidden;
-        }
+    .scroll-container {
+      overflow: hidden;
+    }
 
-        .scroll-track {
-        display: flex;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        scroll-behavior: auto;
-        overflow-x: scroll;
-        scrollbar-width: none;
-        }
+    .scroll-track {
+      display: flex;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      scroll-behavior: auto;
+      overflow-x: scroll;
+      scrollbar-width: none;
+    }
 
-        .scroll-track::-webkit-scrollbar {
-        display: none;
-        }
+    .scroll-track::-webkit-scrollbar {
+      display: none;
+    }
 
-        .scroll-item {
-        flex: 0 0 auto;
-        width: clamp(150px, 20vw, 220px);
-        margin: 0 30px;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        overflow: hidden;
-        padding: 10px 0;
-        }
+    .scroll-item {
+      flex: 0 0 auto;
+      width: clamp(150px, 20vw, 220px);
+      margin: 0 30px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+      padding: 10px 0;
+    }
 
-        .scroll-item img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 8px;
-        pointer-events: none;
-        }
+    .scroll-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      pointer-events: none;
+    }
 
-        .scroll-item a.verify-link {
-        display: block;
-        width: 100%;
-        color: rgb(238, 238, 238);
-        margin-top: 8px;
-        padding: 4px 8px;
-        border-radius: 4px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 14px;
-        background: var(--primary-color);
-        }
+    .scroll-item a.verify-link {
+      display: block;
+      width: 100%;
+      color: rgb(238, 238, 238);
+      margin-top: 8px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      background: var(--primary-color);
+    }
         .scroll-item a.verify-link:hover{
-        background-color: var(--accent-color);
-        }
-        @media (max-width: 600px) {
-        .scroll-wrapper {
+      background-color: var(--accent-color);
+    }
+    @media (max-width: 600px) {
+      .scroll-wrapper {
         padding: 0 0.5rem;
-        }
+      }
 
-        .scroll-item {
+      .scroll-item {
         width: 140px;
         margin: 0 6px;
         padding: 10px 0;
-        }
+      }
 
-        .scroll-item img {
+      .scroll-item img {
         height: 100px;
         width: 100%;
         object-fit: contain;
-        }
+      }
 
-        .verify-link {
+      .verify-link {
         font-size: 14px;
         padding: 6px 0;
         width: 100%;
         display: block;
         text-align: center;
 
-        }
-        }
+      }
+    }
 
-        .hobbies {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        }
+    .hobbies {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
 
-        .hobby-column {
-transition: transform 0.8s ease, opacity 0.8s ease;
-opacity: 1;
-}
+    .hobby-column {
+      transition: transform 0.8s ease, opacity 0.8s ease;
+      opacity: 1;
+    }
 
-        .left {
-        text-align: justify;
+    .left {
+      text-align: justify;
         flex: 70%; /* 60% width */
-        }
+    }
 
-        .right {
+    .right {
         flex: 30%; /* 40% width */
-        }
-        /* Left column animation */
-        .hobby-column.left {
+    }
+    /* Left column animation */
+    .hobby-column.left {
 
-        transform: translateX(-80px);
-        }
+      transform: translateX(-80px);
+    }
 
-        .hobby-column.left.slide-in-left {
-        transform: translateX(0);
-        opacity: 1;
-        }
+    .hobby-column.left.slide-in-left {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
-        .hobby-column.left.slide-out-left {
-        transform: translateX(-80px);
-        opacity: 0;
-        }
+    .hobby-column.left.slide-out-left {
+      transform: translateX(-80px);
+      opacity: 0;
+    }
 
-        /* Right column animation */
-        .hobby-column.right {
-        transform: translateX(80px);
-        }
+    /* Right column animation */
+    .hobby-column.right {
+      transform: translateX(80px);
+    }
 
-        .hobby-column.right.slide-in-right {
-        transform: translateX(0);
-        opacity: 1;
-        }
+    .hobby-column.right.slide-in-right {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
-        .hobby-column.right.slide-out-right {
-        transform: translateX(80px);
-        opacity: 0;
-        }
-        .hobby-column.right img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+    .hobby-column.right.slide-out-right {
+      transform: translateX(80px);
+      opacity: 0;
+    }
+    .hobby-column.right img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease;
-        }
-        @media (max-width: 768px) {
-        .hobbies {
+      transition: transform 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      .hobbies {
         flex-direction: column;
         gap: 40px; /* optional: increase spacing for vertical layout */
-        }
+      }
 
-        .left,
-        .right {
+      .left,
+      .right {
         flex: 100%;
-        }
+      }
 
-        .hobby-column.left,
-        .hobby-column.right {
+      .hobby-column.left,
+      .hobby-column.right {
         transform: translateX(0); /* Reset transforms for mobile */
         opacity: 1;               /* Ensure they’re visible */
-        }
-        }
+      }
+    }
 
         html, body { overflow-x: hidden; }
-        .button-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-        }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
 
-        .btn {
+    .btn {
         flex: 1 1 45%; /* allows shrinking and growing, roughly 45% width */
-        min-width: 120px;
-        padding: 10px 20px;
-        background-color: var(--primary-color);
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-        }
+      min-width: 120px;
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
         .btn:hover{
-        background-color: var(--accent-color);
-        }
+      background-color: var(--accent-color);
+    }
 
-        /* Optional: stack buttons fully on small screens */
-        @media (max-width: 500px) {
-        .btn {
+    /* Optional: stack buttons fully on small screens */
+    @media (max-width: 500px) {
+      .btn {
         flex: 1 1 100%;
-        }
-        }
-        /* added for glowing neon border */
+      }
+    }
+    /* added for glowing neon border */
         .experience, .scroll-wrapper, .skills, .hobbies ,.hobbies1 ,.skill-swiper ,.EXP1{
-        position: relative;
-        margin: 0;
-        animation: fadeIn 1s ease forwards;
-        z-index: 0;
-        }
+      position: relative;
+      margin: 0;
+      animation: fadeIn 1s ease forwards;
+      z-index: 0;
+    }
         .neon-wrapper{
 position:relative;
 padding:5px;
 border-radius:16px;
 background:rgba(255,255,255,0.05);
 overflow:hidden;
-}
+    }
 
 .neon-wrapper::before{
 content:"";
@@ -775,69 +775,69 @@ transparent 55%
 
 opacity:0;
 transition:opacity 0.2s ease;
-}
+    }
 
 .neon-wrapper:hover::before{
 opacity:1;
-}
+    }
 
 
 
-        .skill-swiper .swiper-slide {
-          width: 10rem;
-          height: 22rem;
-          border-radius: 14px;
-          background: #000000;
+    .skill-swiper .swiper-slide {
+      width: 10rem;
+      height: 22rem;
+      border-radius: 14px;
+      background: #000000;
           box-shadow: -1px 5px 15px rgba(0,0,0,0.25);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .skill-swiper .swiper-slide img {
-          width: 85%;
-          height: auto;
-          object-fit: contain;
-          pointer-events: none;
-        }
+    .skill-swiper .swiper-slide img {
+      width: 85%;
+      height: auto;
+      object-fit: contain;
+      pointer-events: none;
+    }
 
-        @media (max-width: 600px) {
-          .skill-swiper {
+    @media (max-width: 600px) {
+      .skill-swiper {
             padding: 28px 0 46px; /* was 60px 0 95px */
-          }
+      }
 
-          .skill-swiper .swiper-slide {
+      .skill-swiper .swiper-slide {
             height: 15rem; /* was 22rem */
-          }
+      }
 
-          .skill-swiper .swiper-slide img {
-            width: 76%;
-          }
-        }
+      .skill-swiper .swiper-slide img {
+        width: 76%;
+      }
+    }
 
-        @media (max-width: 400px) {
-          .skill-swiper {
-            padding: 18px 0 36px;
-          }
+    @media (max-width: 400px) {
+      .skill-swiper {
+        padding: 18px 0 36px;
+      }
 
-          .skill-swiper .swiper-slide {
-            height: 13rem;
-          }
-        }
+      .skill-swiper .swiper-slide {
+        height: 13rem;
+      }
+    }
 
-        /* EXP interactive section */
+    /* EXP interactive section */
 
-/* EXP interactive section */
+    /* EXP interactive section */
 
-/* EXP interactive section */
+    /* EXP interactive section */
 
-/* EXP section */
+    /* EXP section */
 
 .EXP1{
 width:100%;
-}
+    }
 
-/* Top columns */
+    /* Top columns */
 
 .exp-columns{
 display:grid;
@@ -845,7 +845,7 @@ grid-template-columns:repeat(4,1fr);
 gap:10px;
 margin-bottom:20px;
 width:100%;
-}
+    }
 
 .exp-columns button{
 background:var(--primary-color);
@@ -857,43 +857,43 @@ cursor:pointer;
 font-weight:600;
 transition:0.3s;
 width:100%;
-}
+    }
 
 .exp-columns button:hover{
 background:var(--accent-color);
 transform:translateY(-3px);
-}
+    }
 
-/* Responsive */
+    /* Responsive */
 
 @media(max-width:800px){
 .exp-columns{
 grid-template-columns:repeat(2,1fr);
-}
-}
+      }
+    }
 
 @media(max-width:500px){
 .exp-columns{
 grid-template-columns:repeat(1,1fr);
-}
-}
+      }
+    }
 
-/* Split layout */
+    /* Split layout */
 
 .exp-content{
 display:none;
 margin-top:15px;
 width:100%;
-}
+    }
 
 .exp-content.active{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:15px;
 align-items:start;
-}
+    }
 
-/* Image */
+    /* Image */
 
 .exp-left{
 grid-column:1;
@@ -903,15 +903,15 @@ align-items:center;
 justify-content:center;
 border-radius:10px;
 padding:10px;
-}
+    }
 
 .exp-left img{
 width:80%;
 height:80%;
 object-fit:contain;
-}
+    }
 
-/* Text */
+    /* Text */
 
 .exp-right{
 grid-column:2 / span 3;   /* ⭐ occupies columns 2,3,4 */
@@ -919,209 +919,374 @@ background:var(--white);
 padding:20px;
 border-radius:8px;
 min-height:120px;
-}
+    }
 .exp-columns button.active{
-background: var(--accent-color);
-}
+      background: var(--accent-color);
+    }
 #EXP{
 position:relative;
 z-index:5;
-}
+    }
 .exp-columns button{
 pointer-events:auto;
-}
+    }
 
 .exp-header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 margin-bottom:10px;
-}
+    }
 
 .exp-header h3{
 margin:0;
-}
+    }
 
 .exp-header h5{
 margin:0;
 font-weight:500;
 opacity:1;
-}
-    </style>
+    }
 
-    <script> /* added for nav section , theme change */
-			document.addEventListener('DOMContentLoaded', () => {
-				const nav = document.querySelector('nav');
-				const links = Array.from(nav.querySelectorAll('a'));
-				let i = 0;
-				let interval = setInterval(scrollCarousel, 2500);
+    @media(max-width:800px) {
+      .exp-content.active {
+        display: none; /* Hide desktop detail area on mobile */
+      }
+    }
 
-				function scrollCarousel() {
-					nav.scrollTo({
-						left: links[i].offsetLeft - nav.offsetWidth / 2 + links[i].offsetWidth / 2,
-						behavior: 'smooth'
-					});
-					i = (i + 1) % links.length;
-				}
+    /* Experience Modal Styles */
+    .exp-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-				nav.addEventListener('mouseover', () => clearInterval(interval));
-				nav.addEventListener('mouseout', () => interval = setInterval(scrollCarousel, 2500));
+    .exp-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
 
-				const scrollBtn = document.getElementById('scrollTopBtn');
-				const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+    .exp-modal-backdrop {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    }
 
-				window.onscroll = () => {
-					const scrolled = window.scrollY;
-					const nearBottom = (scrolled < document.body.scrollHeight - window.innerHeight - 300);
-					scrollBtn.style.display = (scrolled > 300) ? "block" : "none";
-					scrollBottomBtn.style.display = nearBottom ? "block" : "none";
-				};
+    .exp-modal-container {
+      position: relative;
+      width: 90%;
+      max-width: 550px;
+      background: rgba(17, 24, 39, 0.85); /* Default dark theme background */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.25);
+      transform: scale(0.9) translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      z-index: 2001;
+      color: #f9fafb;
+    }
 
-				scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-				scrollBottomBtn.onclick = () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-			});
-    </script>
+    [data-theme="dark"] .exp-modal-container {
+      background: rgba(10, 10, 10, 0.85);
+      border-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(99, 102, 241, 0.35);
+    }
+
+    [data-theme="light"] .exp-modal-container {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(0, 0, 0, 0.08);
+      color: #1f2937;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 30px rgba(79, 70, 229, 0.15);
+    }
+
+    .exp-modal.active .exp-modal-container {
+      transform: scale(1) translateY(0);
+    }
+
+    .exp-modal-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s, transform 0.2s;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .exp-modal-close:hover {
+      color: var(--accent-color);
+      transform: scale(1.1);
+    }
+
+    .exp-modal-header {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    [data-theme="light"] .exp-modal-header {
+      border-bottom-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .exp-modal-logo-container {
+      width: 70px;
+      height: 70px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .exp-modal-logo-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .exp-modal-title-info h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0;
+      text-transform: uppercase;
+      color: var(--accent-color);
+    }
+
+    .exp-modal-title-info h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 4px 0 2px;
+    }
+
+    .exp-modal-period {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .exp-modal-body ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .exp-modal-body li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .exp-modal-body li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      color: var(--accent-color);
+      font-size: 0.9rem;
+    }
+  </style>
+
+  <script> /* added for nav section , theme change */
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('nav');
+      const links = Array.from(nav.querySelectorAll('a'));
+      let i = 0;
+      let interval = setInterval(scrollCarousel, 2500);
+
+      function scrollCarousel() {
+        nav.scrollTo({
+          left: links[i].offsetLeft - nav.offsetWidth / 2 + links[i].offsetWidth / 2,
+          behavior: 'smooth'
+        });
+        i = (i + 1) % links.length;
+      }
+
+      nav.addEventListener('mouseover', () => clearInterval(interval));
+      nav.addEventListener('mouseout', () => interval = setInterval(scrollCarousel, 2500));
+
+      const scrollBtn = document.getElementById('scrollTopBtn');
+      const scrollBottomBtn = document.getElementById('scrollBottomBtn');
+
+      window.onscroll = () => {
+        const scrolled = window.scrollY;
+        const nearBottom = (scrolled < document.body.scrollHeight - window.innerHeight - 300);
+        scrollBtn.style.display = (scrolled > 300) ? "block" : "none";
+        scrollBottomBtn.style.display = nearBottom ? "block" : "none";
+      };
+
+      scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+      scrollBottomBtn.onclick = () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  </script>
 
 
 </head>
 <body data-theme="dark">
-<header>
+  <header>
     <h1>GANESHPRASAD BALAMURUGAN</h1>
     <p>Java FullStack | SpringBoot | MicroService Developer</p>
     <nav class="carousel" aria-label="Main navigation">
-        <a href="#about" data-preview="My Work Experience Summary">About</a>
-        <a href="#EXP" data-preview="Work experience and Education">Experience</a>
-        <a href="#certifications" data-preview="Tech Stack certifications">Certifications</a>
-        <a href="#skills" data-preview="Tech stack & tools">Skills</a>
-        <a href="#skillbadges" data-preview="Skill Badges Obtained">Skillbadges</a>
-        <a href="#hobbies" data-preview="Problem Solving, Gaming & Music">Hobbies</a>
-        <a href="#contact" data-preview="Email & LinkedIn">Contact</a>
+      <a href="#about" data-preview="My Work Experience Summary">About</a>
+      <a href="#EXP" data-preview="Work experience and Education">Experience</a>
+      <a href="#certifications" data-preview="Tech Stack certifications">Certifications</a>
+      <a href="#skills" data-preview="Tech stack & tools">Skills</a>
+      <a href="#skillbadges" data-preview="Skill Badges Obtained">Skillbadges</a>
+      <a href="#hobbies" data-preview="Problem Solving, Gaming & Music">Hobbies</a>
+      <a href="#contact" data-preview="Email & LinkedIn">Contact</a>
     </nav>
-</header>
+  </header>
 
-<section id="about" style="--i:1;">
+  <section id="about" style="--i:1;">
 
     <h2>About Me</h2>
     <div class="neon-wrapper">
-        <div class="hobbies">
-            <div class="hobby-column left">
-                <p>Experienced Java Developer with a demonstrated history of working in the IT industry. Skilled in
-                    Spring Framework, Micro Services, REST API, Hibernate, Selenium Cucumber, JUNIT, GCP, AZURE.
-                    Involved in end-to-end development of software products starting from requirement analysis to system
-                    study, designing, coding, testing, debugging, documentation & deployment. Sound in problem-solving,
-                    pragmatic thinking, very much interested and motivated to learn new technologies required for my
-                    job.</p>
-                <div class="button-group">
-                    <a href="#contact" class="btn">Contact Me ✆ </a>
-                    <a href="https://github.com/prasadcodebox/portfolio/raw/main/skills/resume.pdf" class="btn"
-                       download="Sample_Resume.pdf">My Resume ⇩ </a>
-                </div>
-            </div>
-            <div class="hobby-column right">
-                <img src="skills/photo.jpg" alt="GANESHPRASAD" style="width: 100%; height: auto; border-radius: 10px;">
-            </div>
+      <div class="hobbies">
+        <div class="hobby-column left">
+          <p>Experienced Java Developer with a demonstrated history of working in the IT industry. Skilled in
+            Spring Framework, Micro Services, REST API, Hibernate, Selenium Cucumber, JUNIT, GCP, AZURE.
+            Involved in end-to-end development of software products starting from requirement analysis to system
+            study, designing, coding, testing, debugging, documentation & deployment. Sound in problem-solving,
+            pragmatic thinking, very much interested and motivated to learn new technologies required for my
+            job.</p>
+          <div class="button-group">
+            <a href="#contact" class="btn">Contact Me ✆ </a>
+            <a href="https://github.com/prasadcodebox/portfolio/raw/main/skills/resume.pdf" class="btn"
+              download="Sample_Resume.pdf">My Resume ⇩ </a>
+          </div>
         </div>
+        <div class="hobby-column right">
+          <img src="skills/photo.jpg" alt="GANESHPRASAD" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="EXP" style="--i:2;">
+  <section id="EXP" style="--i:2;">
     <h2>Work Experience</h2>
 
     <div class="neon-wrapper">
-        <div class="EXP1">
+      <div class="EXP1">
 
-            <!-- clickable columns -->
-            <div class="exp-columns">
+        <!-- clickable columns -->
+        <div class="exp-columns">
 
-                <button onclick="showExp(event,1)">CITI</button>
-                <button onclick="showExp(event,2)">ACCENTURE</button>
-                <button onclick="showExp(event,3)">TCS</button>
-                <button onclick="showExp(event,4)">COGNIZANT</button>
-
-            </div>
-
-            <!-- split content -->
-            <div class="exp-content" id="expContent">
-
-                <div class="exp-left">
-                    <img id="expImage" src="skills/architecture.png" alt="Experience">
-                </div>
-
-                <div class="exp-right">
-
-                    <div class="exp-header">
-                        <h3 id="expDesignation">Designation</h3>
-                        <h5 id="expPeriod">Time Period</h5>
-                    </div>
-
-                    <p id="expRight">
-                        Click a column above to view experience details.
-                    </p>
-
-                </div>
-
-            </div>
+          <button onclick="showExp(event,1)">CITI</button>
+          <button onclick="showExp(event,2)">ACCENTURE</button>
+          <button onclick="showExp(event,3)">TCS</button>
+          <button onclick="showExp(event,4)">COGNIZANT</button>
 
         </div>
-    </div>
-</section>
 
-<section id="certifications" style="--i:3;">
+        <!-- split content -->
+        <div class="exp-content" id="expContent">
+
+          <div class="exp-left">
+            <img id="expImage" src="skills/architecture.png" alt="Experience">
+          </div>
+
+          <div class="exp-right">
+
+            <div class="exp-header">
+              <h3 id="expDesignation">Designation</h3>
+              <h5 id="expPeriod">Time Period</h5>
+            </div>
+
+            <p id="expRight">
+              Click a column above to view experience details.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" style="--i:3;">
     <h2>Certifications</h2>
     <div class="neon-wrapper">
-        <div class="scroll-wrapper">
-            <div class="scroll-container">
-                <div class="scroll-track" id="scrollTrack">
-                </div>
-            </div>
+      <div class="scroll-wrapper">
+        <div class="scroll-container">
+          <div class="scroll-track" id="scrollTrack">
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="skills" style="--i:4;">
+  <section id="skills" style="--i:4;">
     <h2>Skills & Technologies</h2>
     <div class="neon-wrapper">
-        <div class="skills">
-            <div id="skills-sections"></div>
-        </div>
+      <div class="skills">
+        <div id="skills-sections"></div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="skillbadges" style="--i:5;">
+  <section id="skillbadges" style="--i:5;">
     <h2>Skillbadges</h2>
     <div class="neon-wrapper">
-        <div class="swiper skill-swiper">
-            <div class="swiper-wrapper">
+      <div class="swiper skill-swiper">
+        <div class="swiper-wrapper">
 
-                <div class="swiper-slide"><img src="skills/arc1.png"></div>
-                <div class="swiper-slide"><img src="skills/arc2.png"></div>
-                <div class="swiper-slide"><img src="skills/arc3.png"></div>
-                <div class="swiper-slide"><img src="skills/arc4.png"></div>
-                <div class="swiper-slide"><img src="skills/skbg1.png"></div>
-                <div class="swiper-slide"><img src="skills/skbg2.png"></div>
-                <div class="swiper-slide"><img src="skills/skbg3.png"></div>
-                <div class="swiper-slide"><img src="skills/skbg4.png"></div>
-                <div class="swiper-slide"><img src="skills/aiskillfest.png"></div>
+          <div class="swiper-slide"><img src="skills/arc1.png"></div>
+          <div class="swiper-slide"><img src="skills/arc2.png"></div>
+          <div class="swiper-slide"><img src="skills/arc3.png"></div>
+          <div class="swiper-slide"><img src="skills/arc4.png"></div>
+          <div class="swiper-slide"><img src="skills/skbg1.png"></div>
+          <div class="swiper-slide"><img src="skills/skbg2.png"></div>
+          <div class="swiper-slide"><img src="skills/skbg3.png"></div>
+          <div class="swiper-slide"><img src="skills/skbg4.png"></div>
+          <div class="swiper-slide"><img src="skills/aiskillfest.png"></div>
 
-            </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
-<section id="hobbies" style="--i:6;">
+  <section id="hobbies" style="--i:6;">
     <h2>Hobbies</h2>
     <div class="neon-wrapper">
-        <div class="hobbies1">
-            <ul>
-                <li>Solving new problems and learning new technologies</li>
-                <li>Reading Comics and listening music</li>
-                <li>Gaming, feel free to check my gaming channel below</li>
-            </ul>
-        </div>
+      <div class="hobbies1">
+        <ul>
+          <li>Solving new problems and learning new technologies</li>
+          <li>Reading Comics and listening music</li>
+          <li>Gaming, feel free to check my gaming channel below</li>
+        </ul>
+      </div>
     </div>
-</section>
-<!--
+  </section>
+  <!--
 <section id="experience" style="--i:7;">
 	<h2>Work Experience & Education</h2>
 	<div class="neon-wrapper">
@@ -1131,245 +1296,268 @@ opacity:1;
 	</div>
 </section>
 -->
-<section class="contacts" id="contact" style="--i:8;">
+  <section class="contacts" id="contact" style="--i:8;">
     <h2>Contact</h2>
     <h3 class="title">
-        Contact me by:
-        <span class="site-contact" id="typed-text"></span>
+      Contact me by:
+      <span class="site-contact" id="typed-text"></span>
     </h3>
     <div class="icons">
-        <a href="mailto:prasad10.ganesh@outlook.com" target="_blank" rel="noopener noreferrer">
-            <div class="layer">
-                <span></span><span></span><span></span><span></span>
-                <span class="fas fa-envelope"></span>
-            </div>
-            <div class="text">Gmail</div>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=8610679890" target="_blank" rel="noopener noreferrer">
-            <div class="layer">
-                <span></span><span></span><span></span><span></span>
-                <span class="fab fa-whatsapp"></span>
-            </div>
-            <div class="text">Whatsapp</div>
-        </a>
-        <a href="https://www.instagram.com/__i__am__prasad__/" target="_blank" rel="noopener noreferrer">
-            <div class="layer">
-                <span></span><span></span><span></span><span></span>
-                <span class="fab fa-instagram"></span>
-            </div>
-            <div class="text">Instagram</div>
-        </a>
-        <a href="https://www.youtube.com/channel/UCYF98izweQq-0CGpQlmiH7Q?sub_confirmation=1" target="_blank"
-           rel="noopener noreferrer">
-            <div class="layer">
-                <span></span><span></span><span></span><span></span>
-                <span class="fab fa-youtube"></span>
-            </div>
-            <div class="text">YouTube</div>
-        </a>
-        <a href="https://www.linkedin.com/in/prasad10/" target="_blank" rel="noopener noreferrer">
-            <div class="layer">
-                <span></span><span></span><span></span><span></span>
-                <span class="fab fa-linkedin-in"></span>
-            </div>
-            <div class="text">LinkedIn</div>
-        </a>
-        <a href="https://github.com/prasadcodebox" target="_blank" rel="noopener noreferrer">
-            <div class="layer">
-                <span></span><span></span><span></span><span></span>
-                <span class="fab fa-github-square"></span>
-            </div>
-            <div class="text">GitHub</div>
-        </a>
+      <a href="mailto:prasad10.ganesh@outlook.com" target="_blank" rel="noopener noreferrer">
+        <div class="layer">
+          <span></span><span></span><span></span><span></span>
+          <span class="fas fa-envelope"></span>
+        </div>
+        <div class="text">Gmail</div>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=8610679890" target="_blank" rel="noopener noreferrer">
+        <div class="layer">
+          <span></span><span></span><span></span><span></span>
+          <span class="fab fa-whatsapp"></span>
+        </div>
+        <div class="text">Whatsapp</div>
+      </a>
+      <a href="https://www.instagram.com/__i__am__prasad__/" target="_blank" rel="noopener noreferrer">
+        <div class="layer">
+          <span></span><span></span><span></span><span></span>
+          <span class="fab fa-instagram"></span>
+        </div>
+        <div class="text">Instagram</div>
+      </a>
+      <a href="https://www.youtube.com/channel/UCYF98izweQq-0CGpQlmiH7Q?sub_confirmation=1" target="_blank"
+        rel="noopener noreferrer">
+        <div class="layer">
+          <span></span><span></span><span></span><span></span>
+          <span class="fab fa-youtube"></span>
+        </div>
+        <div class="text">YouTube</div>
+      </a>
+      <a href="https://www.linkedin.com/in/prasad10/" target="_blank" rel="noopener noreferrer">
+        <div class="layer">
+          <span></span><span></span><span></span><span></span>
+          <span class="fab fa-linkedin-in"></span>
+        </div>
+        <div class="text">LinkedIn</div>
+      </a>
+      <a href="https://github.com/prasadcodebox" target="_blank" rel="noopener noreferrer">
+        <div class="layer">
+          <span></span><span></span><span></span><span></span>
+          <span class="fab fa-github-square"></span>
+        </div>
+        <div class="text">GitHub</div>
+      </a>
     </div>
-</section>
+  </section>
 
-<footer>
+  <footer>
     <p>&copy; 2025 GANESHPRASAD BALAMURUGAN. All rights reserved.</p>
-</footer>
+  </footer>
 
-<button id="scrollTopBtn" title="Go to top">↑</button>
-<button id="scrollBottomBtn" title="Go to bottom">↓</button>
-<canvas id="cursorCanvas" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;"></canvas>
-<script> /* added  for mouse scroll animation */
-				const canvas = document.getElementById('cursorCanvas');
-				const ctx = canvas.getContext('2d');
+  <!-- Work Experience Modal for Mobile Viewports -->
+  <div id="expModal" class="exp-modal" aria-hidden="true" role="dialog" aria-labelledby="modalExpCompanyName">
+    <div class="exp-modal-backdrop" onclick="closeExpModal()"></div>
+    <div class="exp-modal-container">
+      <button class="exp-modal-close" onclick="closeExpModal()" aria-label="Close modal">&times;</button>
+      <div class="exp-modal-content">
+        <div class="exp-modal-header">
+          <div class="exp-modal-logo-container">
+            <img id="modalExpImage" src="" alt="Company Logo">
+          </div>
+          <div class="exp-modal-title-info">
+            <h3 id="modalExpCompanyName">Company</h3>
+            <h4 id="modalExpDesignation">Designation</h4>
+            <span id="modalExpPeriod" class="exp-modal-period">Time Period</span>
+          </div>
+        </div>
+        <div class="exp-modal-body">
+          <div id="modalExpDetails"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-				const colorRaw = getComputedStyle(document.documentElement)
-				.getPropertyValue('--accent');
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+  <button id="scrollBottomBtn" title="Go to bottom">↓</button>
+  <canvas id="cursorCanvas" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999;"></canvas>
+  <script> /* added  for mouse scroll animation */
+    const canvas = document.getElementById('cursorCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const colorRaw = getComputedStyle(document.documentElement)
+      .getPropertyValue('--accent');
 				const accentColor = `hsla(${
 				colorRaw ? colorRaw.split(" ").join(",") : "0,0%,0%"
-				}, 0.35)`;
+      }, 0.35)`;
 
-				const AnimationFeature = {
-					friction: 0.5,
-					trails: 20,
-					size: 40,
-					dampening: 0.2,
-					tension: 0.98,
-				};
+    const AnimationFeature = {
+      friction: 0.5,
+      trails: 20,
+      size: 40,
+      dampening: 0.2,
+      tension: 0.98,
+    };
 
-				let cursorPosition = { x: 0, y: 0 };
-				let running = true;
-				let newLines = [];
+    let cursorPosition = { x: 0, y: 0 };
+    let running = true;
+    let newLines = [];
 
-				class NewNode {
-					constructor() {
-						this.x = 0;
-						this.y = 0;
-						this.vx = 0;
-						this.vy = 0;
-					}
-				}
+    class NewNode {
+      constructor() {
+        this.x = 0;
+        this.y = 0;
+        this.vx = 0;
+        this.vy = 0;
+      }
+    }
 
-				class Line {
-					constructor(spring) {
-						this.spring = spring + 0.1 * Math.random() - 0.05;
-						this.friction = AnimationFeature.friction + 0.01 * Math.random() - 0.005;
-						this.nodes = [];
-						for (let i = 0; i < AnimationFeature.size; i++) {
-							const t = new NewNode();
-							t.x = cursorPosition.x;
-							t.y = cursorPosition.y;
-							this.nodes.push(t);
-						}
-					}
+    class Line {
+      constructor(spring) {
+        this.spring = spring + 0.1 * Math.random() - 0.05;
+        this.friction = AnimationFeature.friction + 0.01 * Math.random() - 0.005;
+        this.nodes = [];
+        for (let i = 0; i < AnimationFeature.size; i++) {
+          const t = new NewNode();
+          t.x = cursorPosition.x;
+          t.y = cursorPosition.y;
+          this.nodes.push(t);
+        }
+      }
 
-					update() {
-						let e = this.spring;
-						let t = this.nodes[0];
-						t.vx += (cursorPosition.x - t.x) * e;
-						t.vy += (cursorPosition.y - t.y) * e;
-						for (let i = 0; i < this.nodes.length; i++) {
-							t = this.nodes[i];
-							if (i > 0) {
-								const n = this.nodes[i - 1];
-								t.vx += (n.x - t.x) * e;
-								t.vy += (n.y - t.y) * e;
-								t.vx += n.vx * AnimationFeature.dampening;
-								t.vy += n.vy * AnimationFeature.dampening;
-							}
-							t.vx *= this.friction;
-							t.vy *= this.friction;
-							t.x += t.vx;
-							t.y += t.vy;
-							e *= AnimationFeature.tension;
-						}
-					}
+      update() {
+        let e = this.spring;
+        let t = this.nodes[0];
+        t.vx += (cursorPosition.x - t.x) * e;
+        t.vy += (cursorPosition.y - t.y) * e;
+        for (let i = 0; i < this.nodes.length; i++) {
+          t = this.nodes[i];
+          if (i > 0) {
+            const n = this.nodes[i - 1];
+            t.vx += (n.x - t.x) * e;
+            t.vy += (n.y - t.y) * e;
+            t.vx += n.vx * AnimationFeature.dampening;
+            t.vy += n.vy * AnimationFeature.dampening;
+          }
+          t.vx *= this.friction;
+          t.vy *= this.friction;
+          t.x += t.vx;
+          t.y += t.vy;
+          e *= AnimationFeature.tension;
+        }
+      }
 
-					draw() {
-						let e, t;
-						let n = this.nodes[0].x;
-						let i = this.nodes[0].y;
-						ctx.beginPath();
-						ctx.moveTo(n, i);
-						for (let a = 1; a < this.nodes.length - 2; a++) {
-							e = this.nodes[a];
-							t = this.nodes[a + 1];
-							n = 0.5 * (e.x + t.x);
-							i = 0.5 * (e.y + t.y);
-							ctx.quadraticCurveTo(e.x, e.y, n, i);
-						}
-						e = this.nodes[this.nodes.length - 2];
-						t = this.nodes[this.nodes.length - 1];
-						ctx.quadraticCurveTo(e.x, e.y, t.x, t.y);
-						ctx.stroke();
-						ctx.closePath();
-					}
-				}
+      draw() {
+        let e, t;
+        let n = this.nodes[0].x;
+        let i = this.nodes[0].y;
+        ctx.beginPath();
+        ctx.moveTo(n, i);
+        for (let a = 1; a < this.nodes.length - 2; a++) {
+          e = this.nodes[a];
+          t = this.nodes[a + 1];
+          n = 0.5 * (e.x + t.x);
+          i = 0.5 * (e.y + t.y);
+          ctx.quadraticCurveTo(e.x, e.y, n, i);
+        }
+        e = this.nodes[this.nodes.length - 2];
+        t = this.nodes[this.nodes.length - 1];
+        ctx.quadraticCurveTo(e.x, e.y, t.x, t.y);
+        ctx.stroke();
+        ctx.closePath();
+      }
+    }
 
-				function renderAnimation() {
-					if (running) {
-						const rootStyles = getComputedStyle(document.documentElement);
-						const strokeColor = rootStyles.getPropertyValue('--stroke-color').trim();
-						ctx.globalCompositeOperation = "source-over";
-						ctx.clearRect(0, 0, canvas.width, canvas.height);
-						ctx.globalCompositeOperation = "lighter";
-						const theme = document.body.dataset.theme;
-						const strokeColor1 = theme === 'dark'
-						? "rgba(165, 55, 253,1)"
-						: "rgba(50, 150, 255, 0.5)";
+    function renderAnimation() {
+      if (running) {
+        const rootStyles = getComputedStyle(document.documentElement);
+        const strokeColor = rootStyles.getPropertyValue('--stroke-color').trim();
+        ctx.globalCompositeOperation = "source-over";
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.globalCompositeOperation = "lighter";
+        const theme = document.body.dataset.theme;
+        const strokeColor1 = theme === 'dark'
+          ? "rgba(165, 55, 253,1)"
+          : "rgba(50, 150, 255, 0.5)";
 
-						ctx.strokeStyle = strokeColor1;
-						ctx.lineWidth = 1;
-						for (let x, t = 0; t < AnimationFeature.trails; t++) {
-							if (newLines[t]) {
-								x = newLines[t];
-								x.update();
-								x.draw();
-							}
-						}
-						requestAnimationFrame(renderAnimation);
-					}
-				}
+        ctx.strokeStyle = strokeColor1;
+        ctx.lineWidth = 1;
+        for (let x, t = 0; t < AnimationFeature.trails; t++) {
+          if (newLines[t]) {
+            x = newLines[t];
+            x.update();
+            x.draw();
+          }
+        }
+        requestAnimationFrame(renderAnimation);
+      }
+    }
 
-				function move(event) {
-					if (event.touches) {
-						cursorPosition.x = event.touches[0].pageX;
-						cursorPosition.y = event.touches[0].pageY;
-						} else {
-						cursorPosition.x = event.clientX;
-						cursorPosition.y = event.clientY;
-					}
-					//event.preventDefault();
-				}
+    function move(event) {
+      if (event.touches) {
+        cursorPosition.x = event.touches[0].pageX;
+        cursorPosition.y = event.touches[0].pageY;
+      } else {
+        cursorPosition.x = event.clientX;
+        cursorPosition.y = event.clientY;
+      }
+      //event.preventDefault();
+    }
 
-				function createLine(event) {
-					if (event.touches && event.touches.length === 1) {
-						cursorPosition.x = event.touches[0].pageX;
-						cursorPosition.y = event.touches[0].pageY;
-					}
-				}
+    function createLine(event) {
+      if (event.touches && event.touches.length === 1) {
+        cursorPosition.x = event.touches[0].pageX;
+        cursorPosition.y = event.touches[0].pageY;
+      }
+    }
 
-				function onMouseMove(e) {
-					document.removeEventListener("mousemove", onMouseMove);
-					document.removeEventListener("touchstart", onMouseMove);
-					document.addEventListener("mousemove", move);
-					document.addEventListener("touchmove", createLine);
-					document.addEventListener("touchstart", createLine);
-					move(e);
-					populateLines();
-					renderAnimation();
-				}
+    function onMouseMove(e) {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("touchstart", onMouseMove);
+      document.addEventListener("mousemove", move);
+      document.addEventListener("touchmove", createLine);
+      document.addEventListener("touchstart", createLine);
+      move(e);
+      populateLines();
+      renderAnimation();
+    }
 
-				function populateLines() {
-					newLines = [];
-					for (let i = 0; i < AnimationFeature.trails; i++) {
-						newLines.push(new Line(0.45 + (i / AnimationFeature.trails) * 0.025));
-					}
-				}
+    function populateLines() {
+      newLines = [];
+      for (let i = 0; i < AnimationFeature.trails; i++) {
+        newLines.push(new Line(0.45 + (i / AnimationFeature.trails) * 0.025));
+      }
+    }
 
-				function resizeCanvas() {
-					canvas.width = window.innerWidth;
-					canvas.height = window.innerHeight;
-				}
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
 
-				function startAnimation() {
-					if (!running) {
-						running = true;
-						renderAnimation();
-					}
-				}
+    function startAnimation() {
+      if (!running) {
+        running = true;
+        renderAnimation();
+      }
+    }
 
-				function stopAnimation() {
-					running = false;
-				}
+    function stopAnimation() {
+      running = false;
+    }
 
-				function init() {
-					document.addEventListener("mousemove", onMouseMove);
-					document.addEventListener("touchstart", onMouseMove);
-					window.addEventListener("resize", resizeCanvas);
-					window.addEventListener("orientationchange", resizeCanvas);
-					window.addEventListener("focus", startAnimation);
-					window.addEventListener("blur", stopAnimation);
-					resizeCanvas();
-				}
+    function init() {
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("touchstart", onMouseMove);
+      window.addEventListener("resize", resizeCanvas);
+      window.addEventListener("orientationchange", resizeCanvas);
+      window.addEventListener("focus", startAnimation);
+      window.addEventListener("blur", stopAnimation);
+      resizeCanvas();
+    }
 
-				init();
-</script>
+    init();
+  </script>
 
 
-<script>
+  <script>
     // Skills data
     const SKILLS_DATA = [
       {
@@ -1417,50 +1605,50 @@ opacity:1;
     ];
 
     // Create individual skill pill
-  function createSkillPill(name, icon, iconType = "emoji") {
-    const pill = document.createElement('div');
-    pill.classList.add(
-      'flex', 'items-center', 'justify-center', 'gap-2',
-      'rounded-lg', 'border', 'border-accent/20', 'text-sm', 'shadow-sm',
-      'text-black', 'fade-in', 'w-full', 'h-16', 'sm:w-48', 'sm:h-20'
-    );
+    function createSkillPill(name, icon, iconType = "emoji") {
+      const pill = document.createElement('div');
+      pill.classList.add(
+        'flex', 'items-center', 'justify-center', 'gap-2',
+        'rounded-lg', 'border', 'border-accent/20', 'text-sm', 'shadow-sm',
+        'text-black', 'fade-in', 'w-full', 'h-16', 'sm:w-48', 'sm:h-20'
+      );
 
-    // Set background based on data-theme
-    function updatePillBackground() {
-      const theme = document.body.dataset.theme;
-      pill.classList.remove('bg-white', 'bg-black');
-      pill.classList.add(theme === 'dark' ? 'bg-white' : 'bg-gray-300');
+      // Set background based on data-theme
+      function updatePillBackground() {
+        const theme = document.body.dataset.theme;
+        pill.classList.remove('bg-white', 'bg-black');
+        pill.classList.add(theme === 'dark' ? 'bg-white' : 'bg-gray-300');
+      }
+
+      updatePillBackground();
+
+      // Watch for data-theme change
+      const observer = new MutationObserver(updatePillBackground);
+      observer.observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
+
+      // Icon rendering
+      const iconSpan = document.createElement('span');
+      iconSpan.classList.add('h-6', 'w-6', 'sm:h-10', 'sm:w-10', 'flex', 'items-center', 'justify-center');
+
+      if (iconType === "image") {
+        const img = document.createElement('img');
+        img.src = icon;
+        img.alt = `${name} logo`;
+        img.classList.add('h-full', 'w-full', 'object-contain');
+        iconSpan.appendChild(img);
+      } else {
+        iconSpan.textContent = icon;
+      }
+
+      const nameSpan = document.createElement('span');
+      nameSpan.classList.add('font-medium', 'truncate');
+      nameSpan.textContent = name;
+
+      pill.appendChild(iconSpan);
+      pill.appendChild(nameSpan);
+
+      return pill;
     }
-
-    updatePillBackground();
-
-    // Watch for data-theme change
-    const observer = new MutationObserver(updatePillBackground);
-    observer.observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
-
-    // Icon rendering
-    const iconSpan = document.createElement('span');
-    iconSpan.classList.add('h-6', 'w-6', 'sm:h-10', 'sm:w-10', 'flex', 'items-center', 'justify-center');
-
-    if (iconType === "image") {
-      const img = document.createElement('img');
-      img.src = icon;
-      img.alt = `${name} logo`;
-      img.classList.add('h-full', 'w-full', 'object-contain');
-      iconSpan.appendChild(img);
-    } else {
-      iconSpan.textContent = icon;
-    }
-
-    const nameSpan = document.createElement('span');
-    nameSpan.classList.add('font-medium', 'truncate');
-    nameSpan.textContent = name;
-
-    pill.appendChild(iconSpan);
-    pill.appendChild(nameSpan);
-
-    return pill;
-  }
     // Create a skill section
     function createSkillSection(section) {
       const sectionDiv = document.createElement('div');
@@ -1524,20 +1712,20 @@ opacity:1;
 
     // Run on DOM ready
     document.addEventListener("DOMContentLoaded", renderSkillsShowcase);
-</script>
+  </script>
 
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script> /* added for contact section */
-			document.addEventListener("DOMContentLoaded", function () {
-				new Typed('#typed-text', {
-					strings: ['Gmail', 'WhatsApp', 'Instagram', 'YouTube', 'LinkedIn', 'GitHub'],
-					typeSpeed: 100,
-					backSpeed: 60,
-					loop: true
-				});
-			});
-</script>
-<!--
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script> /* added for contact section */
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typed('#typed-text', {
+        strings: ['Gmail', 'WhatsApp', 'Instagram', 'YouTube', 'LinkedIn', 'GitHub'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+      });
+    });
+  </script>
+  <!--
 <script type="text/babel"> /* Added for experience timeline */
 			const { useState, useEffect } = React;
 
@@ -1687,8 +1875,8 @@ opacity:1;
 -->
 
 
-<script> /* Added for certifications scroll track  */
-			const items = [
+  <script> /* Added for certifications scroll track  */
+    const items = [
 			{ name: 'Item 1', image: 'skills/gcpace.png',link: 'https://www.credly.com/badges/8a9a63f1-ceb1-492a-8029-313b641db960/public_url' },
 			{ name: 'Item 2', image: 'skills/gcparch.png',link: 'https://www.credly.com/badges/d89d7ff3-f6d6-40fb-b6a6-dce3160d6ddb/public_url' },
 			{ name: 'Item 3', image: 'skills/gcpdp.png',link: 'https://www.credly.com/earner/earned/badge/516c7e5e-fc6a-4eb5-92c7-d584b0ac307b' },
@@ -1701,167 +1889,167 @@ opacity:1;
 			{ name: 'Item 10', image: 'skills/azadminasoc.png' ,link: 'https://learn.microsoft.com/api/credentials/share/en-us/GANESHPRASADBALAMURUGAN-4654/E611F03983E9355C?sharingId=95694E9517D05350'},
 			{ name: 'Item 11', image: 'skills/azadminexpert.png' ,link: 'https://learn.microsoft.com/api/credentials/share/en-us/GANESHPRASADBALAMURUGAN-4654/EB3AAE00619321AA?sharingId=95694E9517D05350'},
 			{ name: 'Item 12', image: 'skills/azureaiengineer.png' ,link: 'https://learn.microsoft.com/en-us/users/ganeshprasadbalamurugan-4654/credentials/35b6e707f6cbce3a'}
-			];
+    ];
 
-			const scrollTrack = document.getElementById('scrollTrack');
-			const allItems = [...items, ...items, ...items];
+    const scrollTrack = document.getElementById('scrollTrack');
+    const allItems = [...items, ...items, ...items];
 
-			allItems.forEach(item => {
-				const div = document.createElement('div');
-				div.className = 'scroll-item';
+    allItems.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'scroll-item';
 
-				const img = document.createElement('img');
-				img.src = item.image;
-				img.alt = item.name + ' badge';
-				div.appendChild(img);
+      const img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.name + ' badge';
+      div.appendChild(img);
 
-				const verifyLink = document.createElement('a');
-				verifyLink.href = item.link;
-				verifyLink.target = "_blank";
-				verifyLink.rel = "noopener noreferrer";
-				verifyLink.textContent = "Verify Credential";
-				verifyLink.className = "verify-link";
+      const verifyLink = document.createElement('a');
+      verifyLink.href = item.link;
+      verifyLink.target = "_blank";
+      verifyLink.rel = "noopener noreferrer";
+      verifyLink.textContent = "Verify Credential";
+      verifyLink.className = "verify-link";
 
-				div.appendChild(verifyLink);
-				scrollTrack.appendChild(div);
-			});
+      div.appendChild(verifyLink);
+      scrollTrack.appendChild(div);
+    });
 
-			// Auto-scroll
-			let isAutoScrolling = true;
-			function autoScroll() {
-				if (isAutoScrolling) {
-					scrollTrack.scrollLeft += 2.5;
-					if (scrollTrack.scrollLeft >= (scrollTrack.scrollWidth * 2) / 3) {
-						scrollTrack.scrollLeft = scrollTrack.scrollWidth / 3;
-					}
-				}
-				requestAnimationFrame(autoScroll);
-			}
+    // Auto-scroll
+    let isAutoScrolling = true;
+    function autoScroll() {
+      if (isAutoScrolling) {
+        scrollTrack.scrollLeft += 2.5;
+        if (scrollTrack.scrollLeft >= (scrollTrack.scrollWidth * 2) / 3) {
+          scrollTrack.scrollLeft = scrollTrack.scrollWidth / 3;
+        }
+      }
+      requestAnimationFrame(autoScroll);
+    }
 
-			window.onload = () => {
-				scrollTrack.scrollLeft = scrollTrack.scrollWidth / 3;
-				autoScroll();
-			};
+    window.onload = () => {
+      scrollTrack.scrollLeft = scrollTrack.scrollWidth / 3;
+      autoScroll();
+    };
 
-			function stopAutoScroll() {
-				isAutoScrolling = false;
-			}
+    function stopAutoScroll() {
+      isAutoScrolling = false;
+    }
 
-			function startAutoScroll() {
-				isAutoScrolling = true;
-			}
+    function startAutoScroll() {
+      isAutoScrolling = true;
+    }
 
-			scrollTrack.addEventListener('mouseenter', () => {
-				stopAutoScroll();
-				scrollTrack.querySelectorAll('a').forEach(link => {
-					link.style.pointerEvents = 'auto';
-				});
-			});
+    scrollTrack.addEventListener('mouseenter', () => {
+      stopAutoScroll();
+      scrollTrack.querySelectorAll('a').forEach(link => {
+        link.style.pointerEvents = 'auto';
+      });
+    });
 
-			scrollTrack.addEventListener('mouseleave', () => {
-				startAutoScroll();
-				scrollTrack.querySelectorAll('a').forEach(link => {
-					link.style.pointerEvents = 'none';
-				});
-				isDragging = false;
-			});
+    scrollTrack.addEventListener('mouseleave', () => {
+      startAutoScroll();
+      scrollTrack.querySelectorAll('a').forEach(link => {
+        link.style.pointerEvents = 'none';
+      });
+      isDragging = false;
+    });
 
-			// Mouse drag
-			let isDragging = false;
-			let startX;
-			let dragMoved = false;
+    // Mouse drag
+    let isDragging = false;
+    let startX;
+    let dragMoved = false;
 
-			scrollTrack.addEventListener('mousedown', (e) => {
-				dragMoved = false;
-				stopAutoScroll();
-				isDragging = true;
-				startX = e.pageX - scrollTrack.offsetLeft;
-				document.body.classList.add('noselect');
-			});
+    scrollTrack.addEventListener('mousedown', (e) => {
+      dragMoved = false;
+      stopAutoScroll();
+      isDragging = true;
+      startX = e.pageX - scrollTrack.offsetLeft;
+      document.body.classList.add('noselect');
+    });
 
-			scrollTrack.addEventListener('mousemove', (e) => {
-				if (isDragging) dragMoved = true;
-				if (!isDragging) return;
-				const x = e.pageX - scrollTrack.offsetLeft;
-				const walk = (x - startX) * 2;
-				scrollTrack.scrollLeft -= walk;
-				startX = x;
-			});
+    scrollTrack.addEventListener('mousemove', (e) => {
+      if (isDragging) dragMoved = true;
+      if (!isDragging) return;
+      const x = e.pageX - scrollTrack.offsetLeft;
+      const walk = (x - startX) * 2;
+      scrollTrack.scrollLeft -= walk;
+      startX = x;
+    });
 
-			scrollTrack.addEventListener('mouseup', (e) => {
-				if (dragMoved) {
-					e.preventDefault(); // prevent accidental clicks
-				}
-				isDragging = false;
-				document.body.classList.remove('noselect');
-			});
+    scrollTrack.addEventListener('mouseup', (e) => {
+      if (dragMoved) {
+        e.preventDefault(); // prevent accidental clicks
+      }
+      isDragging = false;
+      document.body.classList.remove('noselect');
+    });
 
-			// Touch drag
-			let touchStartX = 0;
-			scrollTrack.addEventListener('touchstart', (e) => {
-				stopAutoScroll();
-				touchStartX = e.touches[0].clientX;
-			}, { passive: true });
+    // Touch drag
+    let touchStartX = 0;
+    scrollTrack.addEventListener('touchstart', (e) => {
+      stopAutoScroll();
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
 
-			scrollTrack.addEventListener('touchmove', (e) => {
-				const touchX = e.touches[0].clientX;
-				const moveX = touchStartX - touchX;
-				scrollTrack.scrollLeft += moveX;
-				touchStartX = touchX;
-			}, { passive: true });
+    scrollTrack.addEventListener('touchmove', (e) => {
+      const touchX = e.touches[0].clientX;
+      const moveX = touchStartX - touchX;
+      scrollTrack.scrollLeft += moveX;
+      touchStartX = touchX;
+    }, { passive: true });
 
-			scrollTrack.addEventListener('touchend', () => {
-				startAutoScroll();
-			});
+    scrollTrack.addEventListener('touchend', () => {
+      startAutoScroll();
+    });
 
-			document.addEventListener('mousedown', (e) => {
-				if (e.button === 0) {
-					window.getSelection().removeAllRanges();
-				}
-			});
-</script>
+    document.addEventListener('mousedown', (e) => {
+      if (e.button === 0) {
+        window.getSelection().removeAllRanges();
+      }
+    });
+  </script>
 
-<script>/* Added for slide in slide out animation for About me section */
-			document.addEventListener("DOMContentLoaded", () => {
-				const leftColumn = document.querySelector(".hobby-column.left");
-				const rightColumn = document.querySelector(".hobby-column.right");
+  <script>/* Added for slide in slide out animation for About me section */
+    document.addEventListener("DOMContentLoaded", () => {
+      const leftColumn = document.querySelector(".hobby-column.left");
+      const rightColumn = document.querySelector(".hobby-column.right");
 
-				const observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach(entry => {
-						const el = entry.target;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            const el = entry.target;
 
-						if (entry.isIntersecting) {
-							if (el.classList.contains("left")) {
-								el.classList.add("slide-in-left");
-								el.classList.remove("slide-out-left");
-								} else if (el.classList.contains("right")) {
-								el.classList.add("slide-in-right");
-								el.classList.remove("slide-out-right");
-							}
-							} else {
-							if (el.classList.contains("left")) {
-								el.classList.remove("slide-in-left");
-								el.classList.add("slide-out-left");
-								} else if (el.classList.contains("right")) {
-								el.classList.remove("slide-in-right");
-								el.classList.add("slide-out-right");
-							}
-						}
-					});
-				},
-				{ threshold: 0.1 }
-				);
+            if (entry.isIntersecting) {
+              if (el.classList.contains("left")) {
+                el.classList.add("slide-in-left");
+                el.classList.remove("slide-out-left");
+              } else if (el.classList.contains("right")) {
+                el.classList.add("slide-in-right");
+                el.classList.remove("slide-out-right");
+              }
+            } else {
+              if (el.classList.contains("left")) {
+                el.classList.remove("slide-in-left");
+                el.classList.add("slide-out-left");
+              } else if (el.classList.contains("right")) {
+                el.classList.remove("slide-in-right");
+                el.classList.add("slide-out-right");
+              }
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
 
-				if (leftColumn) observer.observe(leftColumn);
-				if (rightColumn) observer.observe(rightColumn);
-			});
-</script>
+      if (leftColumn) observer.observe(leftColumn);
+      if (rightColumn) observer.observe(rightColumn);
+    });
+  </script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 
-<script>
+  <script>
     new Swiper(".skill-swiper", {
       effect: "coverflow",
       grabCursor: true,
@@ -1898,106 +2086,149 @@ opacity:1;
         }
       }
     });
-</script>
+  </script>
 
 
-<script>
+  <script>
 
     function showExp(event,type){
-
-    const area = document.getElementById("expContent");
-    const right = document.getElementById("expRight");
-    const img = document.getElementById("expImage");
-    const designation = document.getElementById("expDesignation");
-    const period = document.getElementById("expPeriod");
-
-    if(!area || !right || !img) return;
-
-    /* highlight selected button */
-    document.querySelectorAll(".exp-columns button")
-    .forEach(b => b.classList.remove("active"));
-
-    event.currentTarget.classList.add("active");
-
-    /* show panel */
-    area.classList.add("active");
-
-    /* data */
-    const data = {
+      /* data */
+      const data = {
 
     1:{
     designation:"Java Full stack Developer",
     period:"February 2026 - Present",
     text:[
-    "Working on enterprise banking platforms using Java, Spring Boot and Microservices.",
-    "Implemented load balancing and fallback mechanisms, improving server uptime by 30% during peak hours.",
-    "Refactored the existing codebase, improving overall performance by 20%."
-    ],
+            "Working on enterprise banking platforms using Java, Spring Boot and Microservices.",
+            "Implemented load balancing and fallback mechanisms, improving server uptime by 30% during peak hours.",
+            "Refactored the existing codebase, improving overall performance by 20%."
+          ],
     img:"skills/citi.png"
-    },
+        },
 
     2:{
     designation:"Packaged App Development Senior Analyst",
     period:"July 2024 - January 2026",
     text:[
-    "Led a team of 4 to implement a new microservices architecture, improving module efficiency by 30%.",
-    "Reduced server downtimes by 75% using proactive monitoring and automated alerts with GCP and Azure.",
-    "Implemented load balancing and fallback mechanisms, improving server uptime by 30% during peak hours.",
-    "Refactored the existing codebase, improving overall performance by 20%."
-    ],
+            "Led a team of 4 to implement a new microservices architecture, improving module efficiency by 30%.",
+            "Reduced server downtimes by 75% using proactive monitoring and automated alerts with GCP and Azure.",
+            "Implemented load balancing and fallback mechanisms, improving server uptime by 30% during peak hours.",
+            "Refactored the existing codebase, improving overall performance by 20%."
+          ],
     img:"skills/accenture_bg.png"
-    },
+        },
 
     3:{
     designation:"System Engineer",
     period:"January 2023 - May 2024",
     text:[
-    "Created new web components using JavaFX and worked in the migration project from HTML to JavaFX.",
-    "Used JUnit and Selenium Cucumber for Automation Testing, User Acceptance Testing and Bug Fixing.",
-    "Designed and developed microservices and APIs using Spring Boot while continuously identifying refactoring opportunities."
-    ],
+            "Created new web components using JavaFX and worked in the migration project from HTML to JavaFX.",
+            "Used JUnit and Selenium Cucumber for Automation Testing, User Acceptance Testing and Bug Fixing.",
+            "Designed and developed microservices and APIs using Spring Boot while continuously identifying refactoring opportunities."
+          ],
     img:"skills/tcs.png"
-    },
+        },
 
     4:{
     designation:"Programmer Analyst",
     period:"December 2020 - June 2022",
     text:[
-    "Involved in designing, developing, testing and maintaining Java applications including creating test case scenarios.",
-    "Used Hibernate, DAO and JDBC for database operations and implemented OOPS methodologies in modules.",
-    "Prepared design documentation to assist developers and support project development."
-    ],
+            "Involved in designing, developing, testing and maintaining Java applications including creating test case scenarios.",
+            "Used Hibernate, DAO and JDBC for database operations and implemented OOPS methodologies in modules.",
+            "Prepared design documentation to assist developers and support project development."
+          ],
     img:"skills/cts.png"
+        }
+
+      };
+
+      const isMobile = window.innerWidth <= 800;
+
+      if (isMobile) {
+        const modal = document.getElementById("expModal");
+        const modalImg = document.getElementById("modalExpImage");
+        const modalCompany = document.getElementById("modalExpCompanyName");
+        const modalDesignation = document.getElementById("modalExpDesignation");
+        const modalPeriod = document.getElementById("modalExpPeriod");
+        const modalDetails = document.getElementById("modalExpDetails");
+
+        if (modal && modalImg && modalCompany && modalDesignation && modalPeriod && modalDetails) {
+          const companyNames = {
+            1: "CITI",
+            2: "ACCENTURE",
+            3: "TCS",
+            4: "COGNIZANT"
+          };
+
+          modalCompany.innerHTML = companyNames[type];
+          modalDesignation.innerHTML = data[type].designation;
+          modalPeriod.innerHTML = data[type].period;
+          modalDetails.innerHTML = "<ul>" + data[type].text.map(t => "<li>" + t + "</li>").join("") + "</ul>";
+          modalImg.src = data[type].img;
+
+          modal.classList.add("active");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+      } else {
+        const area = document.getElementById("expContent");
+        const right = document.getElementById("expRight");
+        const img = document.getElementById("expImage");
+        const designation = document.getElementById("expDesignation");
+        const period = document.getElementById("expPeriod");
+
+        if (!area || !right || !img || !designation || !period) return;
+
+        /* highlight selected button */
+        document.querySelectorAll(".exp-columns button")
+          .forEach(b => b.classList.remove("active"));
+
+        event.currentTarget.classList.add("active");
+
+        /* show panel */
+        area.classList.add("active");
+
+        designation.innerHTML = data[type].designation;
+        period.innerHTML = data[type].period;
+        right.innerHTML = "<ul>" + data[type].text.map(t => "<li>" + t + "</li>").join("") + "</ul>";
+        img.src = data[type].img;
+      }
     }
 
-    };
-
-    designation.innerHTML = data[type].designation;
-    period.innerHTML = data[type].period;
-    right.innerHTML = "<ul>" + data[type].text.map(t => "<li>" + t + "</li>").join("") + "</ul>";
-    img.src = data[type].img;
-
+    function closeExpModal() {
+      const modal = document.getElementById("expModal");
+      if (modal) {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
     }
 
-</script>
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeExpModal();
+      }
+    });
+
+  </script>
 
 
-<script>
+  <script>
     document.querySelectorAll(".neon-wrapper").forEach(card => {
 
-    card.addEventListener("mousemove", e => {
+      card.addEventListener("mousemove", e => {
 
-    const rect = card.getBoundingClientRect();
+        const rect = card.getBoundingClientRect();
 
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-    card.style.setProperty("--x", x + "px");
-    card.style.setProperty("--y", y + "px");
+        card.style.setProperty("--x", x + "px");
+        card.style.setProperty("--y", y + "px");
+
+      });
 
     });
-
-    });
-</script>
+  </script>
 </body>
 </html>
