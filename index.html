@@ -401,14 +401,41 @@
       }
     }
 
-    @media (max-width: 450px) {
-      .icons a {
-        margin: 5rem 2rem;
-      }
-    }
     @media (max-width: 600px) {
-        .contacts .site-contact , .contacts .title {
+      .contacts .site-contact , .contacts .title {
         font-size: 1.2rem;
+      }
+      .icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.5rem 1.5rem;
+        justify-items: center;
+        margin: 3rem auto;
+        max-width: 320px;
+      }
+      .icons a {
+        margin: 0;
+      }
+      .icons a .layer {
+        width: 5rem;
+        height: 5rem;
+      }
+      .icons a .layer span.fab,
+      .icons a .layer span.fas {
+        font-size: 2.8rem;
+        line-height: 40px;
+      }
+      .icons a .text {
+        font-size: 1.1rem;
+        bottom: -28px;
+        opacity: 1;
+      }
+      .icons a:hover .layer span:nth-child(2) { transform: translate(3px, -3px); }
+      .icons a:hover .layer span:nth-child(3) { transform: translate(6px, -6px); }
+      .icons a:hover .layer span:nth-child(4) { transform: translate(9px, -9px); }
+      .icons a:hover .layer span:nth-child(5) { transform: translate(12px, -12px); }
+      .icons a:hover .text {
+        bottom: -30px;
       }
     }
 
