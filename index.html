@@ -1594,29 +1594,13 @@ opacity:1;
     }
 
     function move(event) {
-      if (event.touches) {
-        cursorPosition.x = event.touches[0].pageX;
-        cursorPosition.y = event.touches[0].pageY;
-      } else {
-        cursorPosition.x = event.clientX;
-        cursorPosition.y = event.clientY;
-      }
-      //event.preventDefault();
-    }
-
-    function createLine(event) {
-      if (event.touches && event.touches.length === 1) {
-        cursorPosition.x = event.touches[0].pageX;
-        cursorPosition.y = event.touches[0].pageY;
-      }
+      cursorPosition.x = event.clientX;
+      cursorPosition.y = event.clientY;
     }
 
     function onMouseMove(e) {
       document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("touchstart", onMouseMove);
       document.addEventListener("mousemove", move);
-      document.addEventListener("touchmove", createLine);
-      document.addEventListener("touchstart", createLine);
       move(e);
       populateLines();
       renderAnimation();
@@ -1646,8 +1630,16 @@ opacity:1;
     }
 
     function init() {
+      const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || window.matchMedia('(pointer: coarse)').matches;
+      const isMobileScreen = window.innerWidth <= 1024 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      if (isTouchDevice || isMobileScreen) {
+        canvas.style.display = 'none';
+        running = false;
+        return;
+      }
+
       document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("touchstart", onMouseMove);
       window.addEventListener("resize", resizeCanvas);
       window.addEventListener("orientationchange", resizeCanvas);
       window.addEventListener("focus", startAnimation);
