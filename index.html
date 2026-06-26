@@ -726,8 +726,8 @@
     }
     @media (max-width: 768px) {
       .hobbies {
-        flex-direction: column;
-        gap: 40px; /* optional: increase spacing for vertical layout */
+        flex-direction: column-reverse;
+        gap: 20px;
       }
 
       .left,
@@ -1139,6 +1139,53 @@ opacity:1;
       color: var(--accent-color);
       font-size: 0.9rem;
     }
+
+    /* Photo container and hover overlay */
+    .photo-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .photo-overlay {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .photo-container {
+        cursor: pointer;
+      }
+      .photo-overlay {
+        display: flex;
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 10px;
+        pointer-events: none;
+      }
+      .photo-overlay span {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 1px solid #ffffff;
+        padding: 8px 16px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.4);
+      }
+      .photo-container:hover .photo-overlay {
+        opacity: 1;
+      }
+      .photo-container:hover img {
+        transform: scale(1.05);
+        filter: blur(2px);
+      }
+      .hobby-column.left p {
+        display: none;
+      }
+    }
   </style>
 
   <script> /* added for nav section , theme change */
@@ -1210,7 +1257,12 @@ opacity:1;
           </div>
         </div>
         <div class="hobby-column right">
-          <img src="skills/photo.jpg" alt="GANESHPRASAD" style="width: 100%; height: auto; border-radius: 10px;">
+          <div class="photo-container" onclick="openAboutModal()">
+            <img src="skills/photo.jpg" alt="GANESHPRASAD" style="width: 100%; height: auto; border-radius: 10px;">
+            <div class="photo-overlay">
+              <span>Click to know more</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1398,6 +1450,29 @@ opacity:1;
         </div>
         <div class="exp-modal-body">
           <div id="modalExpDetails"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Me Modal for Mobile Viewports -->
+  <div id="aboutModal" class="exp-modal" aria-hidden="true" role="dialog" aria-labelledby="modalAboutTitle">
+    <div class="exp-modal-backdrop" onclick="closeAboutModal()"></div>
+    <div class="exp-modal-container">
+      <button class="exp-modal-close" onclick="closeAboutModal()" aria-label="Close modal">&times;</button>
+      <div class="exp-modal-content">
+        <div class="exp-modal-header" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+          <h3 id="modalAboutTitle" style="color: var(--accent-color); font-size: 1.4rem; font-weight: 700; text-transform: uppercase;">About Me</h3>
+        </div>
+        <div class="exp-modal-body" style="margin-top: 15px;">
+          <p style="line-height: 1.6; font-size: 0.95rem;">
+            Experienced Java Developer with a demonstrated history of working in the IT industry. Skilled in
+            Spring Framework, Micro Services, REST API, Hibernate, Selenium Cucumber, JUNIT, GCP, AZURE.
+            Involved in end-to-end development of software products starting from requirement analysis to system
+            study, designing, coding, testing, debugging, documentation & deployment. Sound in problem-solving,
+            pragmatic thinking, very much interested and motivated to learn new technologies required for my
+            job.
+          </p>
         </div>
       </div>
     </div>
@@ -2231,9 +2306,30 @@ opacity:1;
       }
     }
 
+    function openAboutModal() {
+      if (window.innerWidth <= 768) {
+        const modal = document.getElementById("aboutModal");
+        if (modal) {
+          modal.classList.add("active");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+      }
+    }
+
+    function closeAboutModal() {
+      const modal = document.getElementById("aboutModal");
+      if (modal) {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+    }
+
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         closeExpModal();
+        closeAboutModal();
       }
     });
 
